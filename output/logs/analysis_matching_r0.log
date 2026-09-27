@@ -1,0 +1,384 @@
+kept 327,356  FP 7,256  FN (in candidates) 33,678
+FP pairs on true singletons: 861
+
+FP by cause:
+    2,685   37.0%  near-identical (name & address)
+    1,131   15.6%  look-alike name, same address
+      911   12.6%  transliterated name
+      824   11.4%  same name, different address
+      478    6.6%  house-number conflict
+      453    6.2%  address missing
+      439    6.1%  random/unrelated name (tsr<.5)
+      211    2.9%  other
+      124    1.7%  website-style name
+
+FN by cause:
+   12,488   37.1%  house-number conflict
+    5,212   15.5%  address missing
+    4,574   13.6%  random/unrelated name (tsr<.5)
+    3,879   11.5%  near-identical (name & address)
+    2,462    7.3%  transliterated name
+    2,133    6.3%  look-alike name, same address
+    1,809    5.4%  same name, different address
+      754    2.2%  other
+      367    1.1%  website-style name
+
+===== FALSE POSITIVE: address missing
+  Z T & U Gaming LLC | 3315 Cesar E Chavez Boulevard, Portland, OR
+    -> The Z T & U Gaming Inc. | 
+       score=0.71 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.00 addr_sort=0.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=1.00 translit=0.00 domain=0.00
+  PFK Roman LLC | 8249 15th Street, Howard Lake, MN
+    -> PFK Roman | 
+       score=0.84 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.00 addr_sort=0.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=1.00 translit=0.00 domain=0.00
+  DB Strategy Ltd | 244 Battenkill Evergreens, Jackson, NY
+    -> DB Strategy-Ltd | 
+       score=0.78 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.00 addr_sort=0.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=1.00 translit=0.00 domain=0.00
+  M/W Charter | 3066 Garvin Road, Dayton, OH
+    -> M/W Charter Corp | 
+       score=0.93 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.00 addr_sort=0.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=1.00 translit=0.00 domain=0.00
+  Le College Company | Vill-Narayanpur, Namkhana, South 24 Parganas, West Bengal
+    -> Le  College - 5153036186 | 
+       score=0.75 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.00 addr_sort=0.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=1.00 translit=0.00 domain=0.00
+  Ssr Law Chambers | Tower 2, Flat 1102 Valley View Estate, Gwal Pahari, Gurgaon, Haryana
+    -> Ssr-Law-Chambers Ltd | 
+       score=0.84 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.00 addr_sort=0.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=1.00 translit=0.00 domain=0.00
+
+===== FALSE POSITIVE: house-number conflict
+  Sterling Great Target Group | 201 Chestnut Street, Unit Apartment 2, Oneonta, NY
+    -> STERLING GETA TARGET GRÓUP LLC | NY, 205 CHESTNUT ST, ONEONTA
+       score=0.74 name_tsr=0.94 name_sort=0.94 name_skel=0.97 name_idf_jacc=0.47 addr_idf_jacc=0.55 addr_sort=1.00 num_shared_idf=0.00 num_conflict=1.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Capital Tech Inc | 716 Shuford Circle Drive, Newton, NC
+    -> (Co) Capital Tech | 72 SHUFORD CIRCLE DR, NEWTON, NC
+       score=0.65 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.65 addr_sort=1.00 num_shared_idf=0.00 num_conflict=1.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Vaayuva India Ltd | B-150, Shivalik Malviya Nagar, New Delhi, Delhi
+    -> (Ltd) Vaayuvaer India | B-159, SHIVALIK MALVIYA NAGAR, NEW DELHI, Delhi
+       score=0.89 name_tsr=0.88 name_sort=0.88 name_skel=0.67 name_idf_jacc=0.00 addr_idf_jacc=0.62 addr_sort=1.00 num_shared_idf=0.00 num_conflict=1.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Patriot Council | 399 Main Street, Dalton, MA
+    -> Patriot Council  Inc | 40 MAIN SAINT, DALTON, MA
+       score=0.68 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.52 addr_sort=1.00 num_shared_idf=0.00 num_conflict=1.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Seven Exports Limited | Rz-121A Kumar Colony Uttam Nagar, New Delhi, Delhi
+    -> Seven Exports Pvt Ltd | DL, New Delhi, Door No 180 Rz-142a Kumar Colony Uttam Nagar
+       score=0.62 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.60 addr_sort=1.00 num_shared_idf=0.00 num_conflict=1.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Automated Materials Studios | MA, Amesbury, 5 Pond Hill Road
+    -> automated materials studios co | 26 POND HILL ROAD, AMESBURY, MA
+       score=0.74 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.72 addr_sort=1.00 num_shared_idf=0.00 num_conflict=1.00 addr_missing=0.00 translit=0.00 domain=0.00
+
+===== FALSE POSITIVE: look-alike name, same address
+  Mchan Integrated Fifth | 636 Alicia Drive, City Of El Paso, TX
+    -> Fifth Integrated Thompson | 636 ALICIA DRIVE, CITY OF EL PASO, TX
+       score=0.99 name_tsr=0.84 name_sort=0.81 name_skel=0.87 name_idf_jacc=0.41 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=8.29 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Drusi Pina Interstate Spdr, LLC | Tooele, 409 Country Club Drive, UT
+    -> Washington Pína Interstate Spdr, LLC | 409 Country Club Dr, Tooele, Utah
+       score=0.75 name_tsr=0.87 name_sort=0.70 name_skel=0.88 name_idf_jacc=0.57 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=7.10 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Jind Overseas Private Limited | House No. 02/6, Scheme No. 5, 6, Jind, Jind, Haryana
+    -> Jind Seeds Private Limited | HOUSE NO. D/02/19, SCHEME NO. 5, 6, JIND, JIND, हरियाणा
+       score=0.69 name_tsr=0.70 name_sort=0.70 name_skel=0.67 name_idf_jacc=0.42 addr_idf_jacc=0.86 addr_sort=1.00 num_shared_idf=3.84 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Services Vss Consulting Pvt. Ltd. | Karnataka, 1St Main, M R, Palya, Bangalore North, No. 51/2, Bangalore
+    -> >> Services Vss Solutions Pvt. Ltd. | 51/5, 1St Main, M R, Palya, Bengaluru, Bangalore, KA
+       score=0.73 name_tsr=0.80 name_sort=0.53 name_skel=0.87 name_idf_jacc=0.58 addr_idf_jacc=0.61 addr_sort=0.77 num_shared_idf=5.82 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Mangalam Multispeciality Private Limited | D/601, Shreeram Apartment, S V Road, Kandivali West, Kandivali West, Mumbai, Maharashtra
+    -> Mangalam Developers | Door No 601 D/622, Shreeram Apartment, S V Road, Kandivali West, Kandivali West, Mumbai, महाराष्ट्र
+       score=0.62 name_tsr=0.59 name_sort=0.37 name_skel=0.62 name_idf_jacc=0.38 addr_idf_jacc=0.82 addr_sort=1.00 num_shared_idf=6.72 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Aditan Services | Fl No 110, Syno:262/0, Amrutha Sai Residency, Manikonda, Rangareddy, Telangana
+    -> Aditell Services | FL NO 110, SYNO:262/0, AMRUTHA SAI RESIDENCY, MANIKONDA, RANGAREDDY, Telangana
+       score=0.86 name_tsr=0.84 name_sort=0.84 name_skel=0.90 name_idf_jacc=0.13 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=7.74 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+
+===== FALSE POSITIVE: near-identical (name & address)
+  Grv Medical Centre Corp | Adwave Towers, Iii Rd Floorno 9/B4, South Boag Road T.Nagar, Chennai 17, Chennai, Tamil Nadu
+    -> GRV  MEDICAL CENTRE HOLDINGS CORP | #6 ADWAVE TOWERS, III RD FLOORNO 9/B4, SOUTH BOAG ROAD T.NAGAR, CHENNAI 17, Tamil Nadu
+       score=0.91 name_tsr=1.00 name_sort=0.80 name_skel=1.00 name_idf_jacc=0.86 addr_idf_jacc=0.95 addr_sort=1.00 num_shared_idf=4.80 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  High International Private Limited | Rr Plaza, 2Nd Floor 5/268, Junction Main Road, Five Roads, Salem, Tamil Nadu
+    -> High International [LLP] | 081 RR PLAZA, 2ND FLOOR 5/268, JUNCTION MAIN ROAD, FIVE ROADS, SALEM, Tamil Nadu
+       score=0.94 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.91 addr_sort=1.00 num_shared_idf=7.73 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Olive (India) Research Pvt Ltd | Ground Floor, Unit No B-115, Plot No. T1 & T4, Na Road 1A, Block 11, Zone 1, Sez-Pa, Gandhi Nagar, Gujarat
+    -> Olive (India) Research Limited | Gandhi Nagar, ગુજરાત, 48- Ground Floor, Unit No B-115, Plot No. T1 & T4, Na Road 1A, Block 11, Zone 1, Sez-pa
+       score=0.93 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.91 addr_sort=1.00 num_shared_idf=6.23 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  PVZ Clinic Limited | Yogeshvar Ind Area, Shed No -2, Lodhika, Rajkot, Gujarat
+    -> PVZ Clinic L.L.P. | Shed No -2, Lodhika, GJ, No 60 Yogeshvar Ind Area, Vavdi
+       score=0.94 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.67 addr_sort=0.83 num_shared_idf=2.75 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Jorey's Grill | 1000 2nd Floor Riverview Drive, Rio Rancho, NM
+    -> Jorey's  Grill LLC | #1000 23ND FLOOR RIVERVIEW DR, N/A, RIO RANCHO, NM
+       score=1.00 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.74 addr_sort=0.96 num_shared_idf=7.60 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Amrita Family Private Limited | No 6 299 South Street Achampatti Manoor Taluk, Tirunelveli, Tamil Nadu
+    -> Amrita Family Limited | 15 299 SOUTH STREET ACHAMPATTI MANOOR TALUK, TIRUNELVELI, Tamil Nadu
+       score=0.92 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.86 addr_sort=1.00 num_shared_idf=7.95 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+
+===== FALSE POSITIVE: other
+  Karolbagh Trading Ltd | 43/2917, Beadonpura, Karolbagh, New Delhi, Delhi
+    -> Karolbagh Noodles Ltd | 43/2919, DL, New Delhi, Beadonpura
+       score=0.72 name_tsr=0.69 name_sort=0.65 name_skel=0.67 name_idf_jacc=0.42 addr_idf_jacc=0.40 addr_sort=0.74 num_shared_idf=5.70 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Aarvaksh Building Private Limited | Krishnagiri, Tamil Nadu, Dharmapuri, Plot No. 70, Trend City Nallur Village, Hosur, Krishnagiri
+    -> Aarvakix Building Private | Plot No. 70, Krishnagiri, Dharmapuri, TN
+       score=0.78 name_tsr=0.88 name_sort=0.88 name_skel=0.91 name_idf_jacc=0.25 addr_idf_jacc=0.39 addr_sort=0.62 num_shared_idf=6.02 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Pediatric Dentistry American Medicine | AL, Troy, Unit Lot 2, 744 6611
+    -> PEDIATRIC DENTASTSTRY AMERICAN MEDICINE  GROUP | 753  6611, TROY, AL
+       score=0.79 name_tsr=0.88 name_sort=0.88 name_skel=0.88 name_idf_jacc=0.39 addr_idf_jacc=0.39 addr_sort=0.67 num_shared_idf=10.19 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Adams Metlife PLLC | 1353 Pike Road, Birmingham, AL
+    -> Mcabee Metlife (PLLC) | 1353 1/2 PIKE RD, BIRMMINGHAM TOWNSHIP, AL
+       score=0.93 name_tsr=0.70 name_sort=0.67 name_skel=0.71 name_idf_jacc=0.30 addr_idf_jacc=0.41 addr_sort=0.97 num_shared_idf=9.68 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Pediatric Center | 106 Broadmore Street, Goshen, IN
+    -> pediatric global partners inc | 106 MICHIGAN AVE, GOSHEN, IN
+       score=0.89 name_tsr=0.72 name_sort=0.63 name_skel=0.67 name_idf_jacc=0.30 addr_idf_jacc=0.47 addr_sort=0.62 num_shared_idf=6.02 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Maex Diagnostics LLC | Pleasantville, IA, 512 50th Place
+    -> Maex Co Center | 521 50th Pl, Pleasantville Townshp, Iowa
+       score=0.74 name_tsr=0.53 name_sort=0.52 name_skel=0.59 name_idf_jacc=0.50 addr_idf_jacc=0.45 addr_sort=0.80 num_shared_idf=5.68 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+
+===== FALSE POSITIVE: random/unrelated name (tsr<.5)
+  Ace Global Pvt Ltd | F No. 102, P No. 952, Gafoor Nagar Vittal Rao Nagar, Madhapur, Hyderabad, Telangana
+    -> Modern | F No. 102, P No. 952, Gafoor Nagar Vittal Rao Nagar, Madhapur, Hyderabad, Telangana
+       score=0.73 name_tsr=0.12 name_sort=0.12 name_skel=0.00 name_idf_jacc=0.00 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=8.85 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Mahuva Blanc Private Limited | Siddha Weston, 9, Weston Strreet, 3Rd Floor, Suite No. 321, Kolkata, Kolkata, Howrah, West Bengal
+    -> OI | Siddha Weston, 9, Weston Strreet, 3Rd Floor, Suite No. 321, Kolkata, Kolkata, Howrah, West Bengal
+       score=0.92 name_tsr=0.00 name_sort=0.00 name_skel=0.00 name_idf_jacc=0.00 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=7.22 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Reynolds and Baer Acadia | 2318 College Avenue, Ankeny, IA
+    -> Pesoft L.L.C. | 2318a College Ave, Ankeny, Iowa
+       score=0.81 name_tsr=0.15 name_sort=0.15 name_skel=0.12 name_idf_jacc=0.00 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=9.46 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Ace Impex | Fl 401, Renaissance Appts, Opp. Ghodke Pedhewala, Near Kamala Nehru Park, Prabhat Road, Pune, Maharashtra
+    -> Krn Vyápaar Private Limited | Fl 401, Renaissance Appts, Opp. Ghodke Pedhewala, Near Kamala Nehru Park, Prabhat Road, Pune, MH
+       score=0.65 name_tsr=0.20 name_sort=0.20 name_skel=0.29 name_idf_jacc=0.00 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=6.15 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Ridgeline LP | 1332 Old Phelps Road, Huntsville, TX
+    -> Bao Sphactl Inc. | 1332 OLD PHELPS RD, HUNTSVILLE, TX
+       score=0.66 name_tsr=0.10 name_sort=0.10 name_skel=0.17 name_idf_jacc=0.00 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=9.24 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Knockout & Co | K.V.Rangareddy, Plot No 20 & 21, Telangana, Road No 1, Kondakal Village, Rangareddy
+    -> RANGAREDDY HEA1TH PVT LTD | PLOT NO 20 & 21, ROAD NO 1, KONDAKAL VILLAGE, RANGAREDDY, Telangana
+       score=0.76 name_tsr=0.08 name_sort=0.08 name_skel=0.15 name_idf_jacc=0.00 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=5.01 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+
+===== FALSE POSITIVE: same name, different address
+  Geum Certified Egh | 943 190 Street, Unit LOT C7, Pittsburg, KS
+    -> Geum Certified Egh Co. | 952 190 SAINT, PITTSBURG, KS
+       score=0.82 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.38 addr_sort=0.86 num_shared_idf=7.22 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Heartland Secure Ligand, Inc | 2939 76th Avenue, Mercer Island, WA
+    -> Heartland Secure Ligand, LLC | 2942 76ND AVENUE, MERCER ISSLAND, WA
+       score=0.85 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.32 addr_sort=0.97 num_shared_idf=6.26 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Carolann Lopez Telephone Inc | 4818 State Rte 152, Dillonvale, OH
+    -> Lopez, Carolann Telephone Corp | 4823 STATE RTE 152, SMITHFIELD TWP, OH
+       score=0.92 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.31 addr_sort=0.45 num_shared_idf=7.06 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Jolee Andrews, P.A. | Fl 0, Saint Louis, MO, 1201 Kilgore Drive
+    -> Jolee Andrews P.A. Partners | 122 Kilgore Dr, Fl 0, Saint Lois Township, Missouri
+       score=0.83 name_tsr=1.00 name_sort=0.79 name_skel=1.00 name_idf_jacc=0.90 addr_idf_jacc=0.39 addr_sort=0.97 num_shared_idf=5.53 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Smart Aerospace Holdings | 2135 Waterside Drive, Unit 433, Nashville, TN
+    -> Smart Aerospace Holdings Co. | 2139 Waterside Dr, # 433, Nshville, Tennessee
+       score=0.77 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.35 addr_sort=0.98 num_shared_idf=7.90 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Jaipur (india) | Sector No.09, Vidhyadhar Nagar, Jaipur, Rajasthan, Jaipur, 93
+    -> Jaipur India Private | T - 7-9, Third Floor, Agrasen Tower, Central Spine, Vidhyadhar Nagar, Jaipur, RJ
+       score=0.91 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.30 addr_sort=0.62 num_shared_idf=4.14 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+
+===== FALSE POSITIVE: transliterated name
+  Swastik Industries Private Limited | Door No 5-4-92/1, 2Nd Floor, Sandeep Towers Adjacent To Ai Karim Trade Centre, Ranigunj, Secunderabad, Hyderabad, Telangana
+    -> స్వస్తిక్ మార్కెటింగ్ ప్రైవేట్ లిమిటెడ్ | DOOR NO 5-4-92/5, 2ND FLOOR, SANDEEP TOWERS ADJACENT TO AI KARIM TRADE CENTRE, RANIGUNJ, SECUNDERABAD, HYDERABAD, Telangana
+       score=0.75 name_tsr=0.44 name_sort=0.44 name_skel=0.59 name_idf_jacc=0.00 addr_idf_jacc=0.97 addr_sort=1.00 num_shared_idf=6.42 num_conflict=0.00 addr_missing=0.00 translit=1.00 domain=0.00
+  Sun Estate Private Limited | 129-E, Shaheed Bhagat Singh Nagar, Ludhiana, Punjab
+    -> ਮਾਡਰਨ ਇਸਟੇਟ ਲਿਮਟਿਡ | No 129 A, Ludhiana, PB
+       score=0.61 name_tsr=0.46 name_sort=0.46 name_skel=0.57 name_idf_jacc=0.00 addr_idf_jacc=0.31 addr_sort=0.37 num_shared_idf=6.72 num_conflict=0.00 addr_missing=0.00 translit=1.00 domain=0.00
+  Sree Trading Limited | Gut No .39 Mhasrul, Jafarabad, Jalna, Jalna, Maharashtra
+    -> श्री ट्रेडिंग होटल लिमिटेड | JALNA, महाराष्ट्र, GUT NO .39 MHASRUL 1000012, <NULL>
+       score=0.82 name_tsr=0.55 name_sort=0.55 name_skel=1.00 name_idf_jacc=0.00 addr_idf_jacc=0.54 addr_sort=0.77 num_shared_idf=5.62 num_conflict=0.00 addr_missing=0.00 translit=1.00 domain=0.00
+  Swastik Management Private Limited | West Bengal, North 24 Parganas, North 24 Pgs, C/O Sasanka Naskar, Mohisbathan, Dag No - 263, P.No - 48, P.O - Krishnapur (E.C)
+    -> আলফা শিবম ম্যানেজমেন্ট প্রাইভেট লিমিটেড | C/o Sasanka Naskar, Mohisbathan, Dag No - 263, P.no - 48, P.o - Krishnapur (E.C), North 24 Parganas, North 24 Pgs, WB
+       score=0.75 name_tsr=0.44 name_sort=0.44 name_skel=0.45 name_idf_jacc=0.00 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=7.77 num_conflict=0.00 addr_missing=0.00 translit=1.00 domain=0.00
+  Sun Marketing Limited | 1, Amey Society 40, Rambag Colony, Paud Road, Pune, Maharashtra
+    -> सुपर मार्केटिंग प्राइवेट लिमिटेड | RAMBAG COLONY, PUNE, Maharashtra
+       score=0.99 name_tsr=0.83 name_sort=0.83 name_skel=0.84 name_idf_jacc=0.00 addr_idf_jacc=0.35 addr_sort=0.63 num_shared_idf=0.00 num_conflict=0.00 addr_missing=0.00 translit=1.00 domain=0.00
+  Aditya Hitech Infra Private Limited | C/O Sri Surendra Singh, S/O Sri Ramjatan Gola Road, Baliy Road, Danapur, Patna, Bihar
+    -> आदित्य हाईटेक इंफ्रा स्टोर्स प्राइवेट लिमिटेड | NO D/53 C/O SRI SURENDRA SINGH, S/O SRI RAMJATAN GOLA ROAD, BALIY ROAD, DANAPUR, PATNA, Bihar
+       score=0.70 name_tsr=0.60 name_sort=0.60 name_skel=0.80 name_idf_jacc=0.00 addr_idf_jacc=0.93 addr_sort=1.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=0.00 translit=1.00 domain=0.00
+
+===== FALSE POSITIVE: website-style name
+  Producer Day Venkateswara Pvt Ltd | Plot No 67P B No. 1202, Industrial Estate, Pune City, Pune, Maharashtra
+    -> vdeventures.com | 67P B NO-1202 HADAPSAR INDUSTRIAL ESTATE, PUNE, Maharashtra
+       score=0.78 name_tsr=0.44 name_sort=0.44 name_skel=0.45 name_idf_jacc=0.00 addr_idf_jacc=0.78 addr_sort=0.83 num_shared_idf=7.99 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=1.00
+  Pediatric Associates Associates | 1517 Iowa Street, South Bend, IN
+    -> PEDIATRICDENTAL.COM | 01517 HILDRETH ST, SOUTH BEND, IN
+       score=0.99 name_tsr=0.51 name_sort=0.51 name_skel=0.50 name_idf_jacc=0.00 addr_idf_jacc=0.64 addr_sort=0.67 num_shared_idf=9.01 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=1.00
+  CW Producer Private Limited | B-64, Orchid Tower, Yamuna Nagar, Off Link Road, Andheri (W), Mumbai, Mumbai City, Maharashtra
+    -> etproducts.com | MUMBAI CITY, B-64, Maharashtra, ORCHID TOWERS, YAMUNA NAGAR, OFF. LINK ROAD, ANDHERI WEST, MUMBAI
+       score=0.67 name_tsr=0.57 name_sort=0.57 name_skel=0.50 name_idf_jacc=0.00 addr_idf_jacc=0.82 addr_sort=0.99 num_shared_idf=6.04 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=1.00
+  Blithe Services Pvt. Ltd. | 2802 Maharaja Retreat, Kanyapada Gen A K V Marg, Goregaon East, Mumbai, Maharashtra
+    -> servicespublic.com | 2802, MUMBAI, महाराष्ट्र
+       score=0.97 name_tsr=0.55 name_sort=0.55 name_skel=0.56 name_idf_jacc=0.00 addr_idf_jacc=0.20 addr_sort=0.21 num_shared_idf=9.55 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=1.00
+  Swastik Energy Private Limited | 1-34/4, Nemaragomula, Bibinagar, Yadagiri Bhuvanagiri District, Nalgonda, Telangana
+    -> vijayalakshmienergy.com | Hn 00577 1-34/4, Nemaragomula, Bibinagar, Yadagiri Bhuvanagiri District, Nalgonda, TG
+       score=0.95 name_tsr=0.36 name_sort=0.36 name_skel=0.32 name_idf_jacc=0.00 addr_idf_jacc=0.85 addr_sort=0.98 num_shared_idf=5.50 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=1.00
+  Randolph Baptist Rocky Services Inc | 20 Mazzeo Drive, Unit 221, Randolph, MA
+    -> usrandolph.com | Randolph, 20 Mazzeo Dr, Massachusetts
+       score=0.98 name_tsr=0.44 name_sort=0.44 name_skel=0.43 name_idf_jacc=0.00 addr_idf_jacc=0.81 addr_sort=1.00 num_shared_idf=4.96 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=1.00
+
+===== FALSE NEGATIVE: address missing
+  Beckley, Schultz & Treadway Stardust | 110 Augusta Avenue, Spokane, WA
+    -> BECKLEY, SCHULTZ + TREADWAY CENTER | 
+       score=0.43 name_tsr=0.87 name_sort=0.75 name_skel=0.86 name_idf_jacc=0.73 addr_idf_jacc=0.00 addr_sort=0.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=1.00 translit=0.00 domain=0.00
+  Le (India) Exports Center | 505 Center Plaza Jn Off Daftary Road & Shivaji Chowk, Malad East, Mumbai City, Maharashtra
+    -> Smt Le (India) Exports Center LLP | 
+       score=0.37 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.00 addr_sort=0.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=1.00 translit=0.00 domain=0.00
+  Malcolm Tower Corp | 36 10 Road, Far Rockaway, NY
+    -> Malc0lm-Tower Corp | 
+       score=0.37 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.00 addr_sort=0.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=1.00 translit=0.00 domain=0.00
+  Eye Capital Partners | 4033 23rd Street, Snyder, TX
+    -> Eye Capital | 
+       score=0.08 name_tsr=1.00 name_sort=0.71 name_skel=1.00 name_idf_jacc=0.77 addr_idf_jacc=0.00 addr_sort=0.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=1.00 translit=0.00 domain=0.00
+  Zena Marchant Rapid Shore LLC | 100 Holmes Drive, Unit B, Paducah, KY
+    -> Zena Marchant (Rapid) | 
+       score=0.26 name_tsr=1.00 name_sort=0.86 name_skel=1.00 name_idf_jacc=0.77 addr_idf_jacc=0.00 addr_sort=0.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=1.00 translit=0.00 domain=0.00
+  Smith, Rodriguez and Hernandez Regional | 2384 Duffy Hill Road, Enosburgh, VT
+    -> Smith, Rodriguez and Hernandez Regional Corp | 
+       score=0.07 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.00 addr_sort=0.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=1.00 translit=0.00 domain=0.00
+
+===== FALSE NEGATIVE: house-number conflict
+  Lantz & Smith Partners | 194 Mcadams Road, Mckenzie, TN
+    -> Lantz & Smith Partners Inc. | 178 MCADAMS RD, MCKENZIE, TN
+       score=0.27 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.60 addr_sort=1.00 num_shared_idf=0.00 num_conflict=1.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Griggs Columbia | 4305 Greenhill Avenue, Baltimore, MD
+    -> Griggs Columbia Corporation | 4288 GREENHILL AVE, N/A, BALTIMORE, MD
+       score=0.29 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.44 addr_sort=0.96 num_shared_idf=0.00 num_conflict=1.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Saket Flavours Pvt Ltd | H No 131, Salemgarh, Hisar, Haryana
+    -> Saket Flávours Pvt Ltd | HR, Hisar, Salemgarh, No 31
+       score=0.66 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.64 addr_sort=1.00 num_shared_idf=0.00 num_conflict=1.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Ridge Preparatory Academy LLC | 4012 San Roberto Avenue, Unit APT A, Anchorage, AK
+    -> RIDGE PRPNNARFLMRY-ACADEMY LLC | 3667 SAN ROBERTO AVETUE, ANCHORAGE, AK
+       score=0.27 name_tsr=0.82 name_sort=0.82 name_skel=0.85 name_idf_jacc=0.34 addr_idf_jacc=0.41 addr_sort=0.94 num_shared_idf=0.00 num_conflict=1.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Hutchison Innovative Alternative Ltd | 2204 Carousel Drive, Killeen, TX
+    -> HUTCHISON INNOVATIVE | 204 CAROUSEL DR, KILLEEN, TX
+       score=0.37 name_tsr=1.00 name_sort=0.77 name_skel=1.00 name_idf_jacc=0.65 addr_idf_jacc=0.58 addr_sort=1.00 num_shared_idf=0.00 num_conflict=1.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Signature Semiconductor Systems LLC | IL, 10141 Humbolt Street, Huntley
+    -> Signature Semiconductor Sysrerm LLC | Illinois, Huntley, 10463-B Humbolt Street
+       score=0.24 name_tsr=0.94 name_sort=0.94 name_skel=0.92 name_idf_jacc=0.39 addr_idf_jacc=0.49 addr_sort=1.00 num_shared_idf=0.00 num_conflict=1.00 addr_missing=0.00 translit=0.00 domain=0.00
+
+===== FALSE NEGATIVE: look-alike name, same address
+  Rice Aria, L.L.C. | 106 Weldon Drive, Dudley, NC
+    -> Rice A,e L.L.C. | #106 Weldon Dr, Dudley, North Carolina
+       score=0.64 name_tsr=0.71 name_sort=0.71 name_skel=0.73 name_idf_jacc=0.28 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=6.02 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  United Aggregators Pvt Ltd | 96A, Sri Aurobindo Marg Near Iit Delhi, Adhchini New Delhi, South Delhi, Delhi
+    -> UNITED PVT LTD CENTER | दिल्ली, NO 125 96A, SRI AUROBINDO MARG NEAR IIT DELHI, ADHCHINI NEW DELHI, SOUTH DELHI
+       score=0.29 name_tsr=0.65 name_sort=0.65 name_skel=0.67 name_idf_jacc=0.26 addr_idf_jacc=0.89 addr_sort=1.00 num_shared_idf=6.51 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Valley Illumination P.C. | 138 Ross Road, Middlefield, CT
+    -> Valley PC Services | 138 1/2 ROSS RD, MIDDLEFIELD, CT
+       score=0.62 name_tsr=0.57 name_sort=0.47 name_skel=0.40 name_idf_jacc=0.30 addr_idf_jacc=0.83 addr_sort=1.00 num_shared_idf=6.89 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  System Homes-Bhosari | J-1, S Block, Midc, Bhosari, Pune, Maharashtra
+    -> System HomesbBdosir | J-1 , S BLOCK, MIDC, BHOSARI, Maharashtra
+       score=0.05 name_tsr=0.62 name_sort=0.62 name_skel=0.64 name_idf_jacc=0.18 addr_idf_jacc=0.86 addr_sort=0.89 num_shared_idf=2.57 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Tech Finance Private Limited | 57/1/5, Shanti Niketan Bicholi Hapsi Mardana, Indore, Madhya Pradesh
+    -> Tech Fimanie Private (Limited) | www.techfiman.com | Madhya Pradesh, 57/1/5, SHANTI NIKETAN BICHOLI HAPSI MARDANA, INDORE
+       score=0.67 name_tsr=0.50 name_sort=0.48 name_skel=0.52 name_idf_jacc=0.11 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=6.01 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Panvel Business Corp | Behind Irs Tower, Maharashtra, Raigarh(Mh), Panvel, Sh-01 Pl-36 Sect-21
+    -> Panvel Bsinse Corp | DOOR NO 111 SH-01 PL-36 SECT-21, BEHIND IRS TOWER, PANVEL, Maharashtra
+       score=0.59 name_tsr=0.86 name_sort=0.86 name_skel=1.00 name_idf_jacc=0.32 addr_idf_jacc=0.83 addr_sort=0.89 num_shared_idf=5.51 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+
+===== FALSE NEGATIVE: near-identical (name & address)
+  Economic Development Charities Inc | 907 Highway 70, AR, Dierks
+    -> Economic Development  Charities Inc | 1143 HIGHWAY 70, DIERKS, AR
+       score=0.68 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.57 addr_sort=1.00 num_shared_idf=6.02 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Nova Institute of Technology | D.No: 58-2-15, Santhapeta, Near Anjaneyaswamy Temple, Ongole, Prakasam, Andhra Pradesh
+    -> Nova Institute | Plot 577 D.no: 58-2-15, Santhapeta, Near Anjaneyaswamy Temple, Ongole, Prakasam, ఆంధ్రప్రదేశ్
+       score=0.42 name_tsr=1.00 name_sort=0.67 name_skel=1.00 name_idf_jacc=0.58 addr_idf_jacc=0.88 addr_sort=1.00 num_shared_idf=6.00 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Jaipur Solutions Private Limited | Flat No. 26K-5, First Floor, Jyoti Nagar, Sahkar Marg, Jaipur, Rajasthan
+    -> jaipur solutions private limited | DOOR NO 36K-5 , FIRST FLOOR, JYOTI NAGAR, SAHKAR MARG, JAIPUR, राजस्थान
+       score=0.58 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.77 addr_sort=1.00 num_shared_idf=3.71 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Ks Processing Private Limited | Cmc No 8-11-45, Bidar, Karnataka, Shop No 06, Beside Garje Building, Opp To Canara Bank And Gajanan Complex
+    -> Ks Processing Limited Private | CMC NO 8-11-45, SHOP NO 06, BESIDE GARJE BUILDING, OPP TO CAARA BANK AND GAJANAN COMPLEX, BIDAR, Karnataka
+       score=0.69 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.78 addr_sort=0.99 num_shared_idf=5.69 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Global Pooja Hudson Private Limited | Govindanaickem Palayam, Komarayee Valasu, Modakurichi, Erode, Tamil Nadu
+    -> GLOBAL POOJA HUDSON PRIVATE | DOOR NO 904 GOVINDANAICKEM PALAYAM, KOMARAYEE VALASU, MODAKURICHI, ERODE, தமிழ்நாடு
+       score=0.59 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.90 addr_sort=1.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Monreal and Covarrubias LP | 4226 Irish Hills Drive, Unit 1A, South Bend, IN
+    -> Monreal and Cóvarrubias LP | 3956 Irish Hills Drive, # 1A, S. Bend, Indiana
+       score=0.16 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.58 addr_sort=1.00 num_shared_idf=2.57 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+
+===== FALSE NEGATIVE: other
+  Mekong Welfare Society | 9A, Royal Empress, Jawahar Nagar Colony Eranhipalam, Kozhikode, Kerala
+    -> Sri Mekong Society Partners | 9A, Calicut, KL
+       score=0.02 name_tsr=0.80 name_sort=0.62 name_skel=0.76 name_idf_jacc=0.66 addr_idf_jacc=0.07 addr_sort=0.13 num_shared_idf=4.14 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Rithika Logistics Pvt. Ltd. | 13/2. South Tukoganj, Indore, Madhya Pradesh
+    -> Rithika Pvt. Ltd. Services | 3/2. Sotth Tukoganj, Indore, MP, Indore
+       score=0.63 name_tsr=0.73 name_sort=0.42 name_skel=0.74 name_idf_jacc=0.57 addr_idf_jacc=0.42 addr_sort=0.89 num_shared_idf=2.75 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Sai Technology Limited | C/O Sadhna Naval Nilay, Dreame Clny Banapura, Seoni Malwa, Hoshangabad, Madhya Pradesh
+    -> Center Sai Limited | Plot 449 C/o Sadhna Naval Nlay, Seoni Malwa, MP
+       score=0.00 name_tsr=0.50 name_sort=0.25 name_skel=0.62 name_idf_jacc=0.43 addr_idf_jacc=0.34 addr_sort=0.63 num_shared_idf=0.00 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Falcon L.L.C. | 247 Shore Dr, Middlesex County, VA
+    -> FRCOLFACN L.L.C. | 247 SHORE DR, HARTFIELD, VA
+       score=0.00 name_tsr=0.53 name_sort=0.53 name_skel=0.73 name_idf_jacc=0.00 addr_idf_jacc=0.40 addr_sort=0.55 num_shared_idf=7.62 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Pohl Certified Village Inc. | 8270 Hwy 104, Cedar Grove, TN
+    -> P0hl Village Inc. Center | 007902 Hwy 104, PMB 3938, Cedar Grove, Tennessee
+       score=0.45 name_tsr=0.83 name_sort=0.83 name_skel=0.78 name_idf_jacc=0.68 addr_idf_jacc=0.41 addr_sort=1.00 num_shared_idf=5.78 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Maynard Enterprises | 114866 4288 Circle, Porum, OK
+    -> Maynard Center | 114835-C 4288 CIR, PORUM, OK
+       score=0.12 name_tsr=0.79 name_sort=0.79 name_skel=0.76 name_idf_jacc=0.56 addr_idf_jacc=0.47 addr_sort=1.00 num_shared_idf=11.25 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+
+===== FALSE NEGATIVE: random/unrelated name (tsr<.5)
+  Zee Industries Private Limited | Plot No:76, Rubber Park, Valayanchirangara, Ernakulam, Kerala
+    -> Veolum | Prot No:#76, Rubber Park, Valayanchirangara, Ernakulam, കേരളം
+       score=0.54 name_tsr=0.10 name_sort=0.10 name_skel=0.00 name_idf_jacc=0.00 addr_idf_jacc=0.78 addr_sort=0.94 num_shared_idf=6.26 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Aditya Trading Private Limited | C/O Jatin Patel, Lake, View Point, Lake Palace, Bardoli, Surat, Gujarat
+    -> Mr Xylobelo | C/o Jatin Patel, Bardoli, Surat, GJ
+       score=0.40 name_tsr=0.09 name_sort=0.09 name_skel=0.00 name_idf_jacc=0.00 addr_idf_jacc=0.60 addr_sort=0.68 num_shared_idf=0.00 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Consumer Inc | 30 Fall Creek Drive, Unit Unit 12, Branson, MO
+    -> Novidova | 30 Fall Creek Drive, Branson, Missouri
+       score=0.24 name_tsr=0.12 name_sort=0.12 name_skel=0.22 name_idf_jacc=0.00 addr_idf_jacc=0.87 addr_sort=1.00 num_shared_idf=5.26 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Clark & Goode | 140990 Naugart Drive, Town Of Berlin, WI
+    -> LUMFLUXDREX | 140990 NAUGART DR, TOWN OF BERLIN, WI
+       score=0.51 name_tsr=0.27 name_sort=0.27 name_skel=0.27 name_idf_jacc=0.00 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=14.55 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Latisha Lee Chenghe LLC | 6527 192nd Avenue, Beaverton, OR
+    -> Novievo | OR, BEAVERTON, 6527 192ND AVENUE
+       score=0.06 name_tsr=0.23 name_sort=0.23 name_skel=0.18 name_idf_jacc=0.00 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=10.55 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Shree Realtors LLP | 167 Sri Srininvasapuram, Colony Road No. 8, Hayathnagar, Hyderabad, Telangana
+    -> M/s Shree LLP  Center | Colony Road No. 8, Hayathnagar, <NULL>, తెలంగాణ, H.no 167 Sri Srininvasapuram
+       score=0.01 name_tsr=0.43 name_sort=0.43 name_skel=0.44 name_idf_jacc=0.00 addr_idf_jacc=0.91 addr_sort=0.89 num_shared_idf=7.18 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+
+===== FALSE NEGATIVE: same name, different address
+  Oliver, Hahn & Ford Robotics LP | 17869 Us Highway 69, Gilbert, IA
+    -> Oliver Hahn + Ford Robotics LP | 37869 Us Highway 69, Gilbert, Iowa
+       score=0.22 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.39 addr_sort=1.00 num_shared_idf=6.22 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Adj Reality Private Limited | House No-408 C/2, Left Portion, 2Nd Floor, Near Sheetla Mata Mandir, Basai Dara Pur, New Delhi, West Delhi, Delhi
+    -> Smt adj rea1ity private limited | House No-408 C/2, <NULL>, New Delhi, Harsana Kalan, दिल्ली
+       score=0.63 name_tsr=0.91 name_sort=0.91 name_skel=0.92 name_idf_jacc=0.33 addr_idf_jacc=0.16 addr_sort=0.44 num_shared_idf=7.01 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Madhur Brothers Private Limited | Nri Plaza Rajiv Nagar, Nala Main Road, Keshari Nagar, Phulwari, Patna, Bihar
+    -> Madhur Brothers Limited Services | Nri Plaza Rajiv Nagar, Phulwari, Bikram ,DISTT. Patna, BR
+       score=0.04 name_tsr=1.00 name_sort=0.77 name_skel=1.00 name_idf_jacc=0.82 addr_idf_jacc=0.46 addr_sort=0.76 num_shared_idf=0.00 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Ronnica Reichert Custom Alternative Inc | 9761 51, Hulbert, OK
+    -> Ronnica Reichert Custom Alternative | 51, HLBERT, OK
+       score=0.60 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.14 addr_sort=0.92 num_shared_idf=5.82 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Internal Medicine Group | 546 Ike Clark Circle, Lewisburg, WV
+    -> Internal Medicine | Lewisubrg, Ike Clark Circle, West Virginia
+       score=0.54 name_tsr=1.00 name_sort=0.85 name_skel=1.00 name_idf_jacc=0.76 addr_idf_jacc=0.44 addr_sort=0.96 num_shared_idf=0.00 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+  Electricians Local 337 | 8 Elwyn Road, Boston, MA
+    -> Electricians Lócal 337 LP | 8 Elwn Rd, Dorcehster Center, Massachusetts
+       score=0.12 name_tsr=1.00 name_sort=1.00 name_skel=1.00 name_idf_jacc=1.00 addr_idf_jacc=0.10 addr_sort=0.55 num_shared_idf=3.96 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=0.00
+
+===== FALSE NEGATIVE: transliterated name
+  Sree Technology Private Limited | Shopno 7, First Floor, Jai Plaza Sector1, Dadri, Gautam Buddha Nagar, Uttar Pradesh
+    -> श्री टेक्नोलॉजी प्राइवेट लिमिटेड | 7, First Floor, Jai Plaza Sector1, Gautam Buddha Nagar, Noida, उत्तर प्रदेश
+       score=0.68 name_tsr=0.55 name_sort=0.55 name_skel=0.71 name_idf_jacc=0.00 addr_idf_jacc=0.65 addr_sort=0.79 num_shared_idf=3.96 num_conflict=0.00 addr_missing=0.00 translit=1.00 domain=0.00
+  City Technology Private Limited | 96, Aguna Mohalla Kotavad Tal, Churu, Rajasthan
+    -> सिटी टेक्नोलॉजी प्राइवेट लिमिटेड | No 836 96, Aguna Mohalla Kotavad Tal, Churu, RJ
+       score=0.23 name_tsr=0.53 name_sort=0.53 name_skel=0.59 name_idf_jacc=0.00 addr_idf_jacc=0.87 addr_sort=1.00 num_shared_idf=6.51 num_conflict=0.00 addr_missing=0.00 translit=1.00 domain=0.00
+  High It Limited | Gujarat, Bhavnagar, Gadhada, Mohannagar Society Opp. New Bus Staion, Bhavnagar
+    -> હાઇ આઈટી લિમિટેડ | MOHANNAGAR SOCIETY OPP. NEW BUS STAION, GADHADA, BHAVNAGAR, Gujarat
+       score=0.12 name_tsr=0.30 name_sort=0.30 name_skel=0.22 name_idf_jacc=0.00 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=0.00 translit=1.00 domain=0.00
+  All Care LLP | Ghaziabad, Uttar Pradesh, Ag-32 Park Town, Comercial Complex Bamheta
+    -> All Care एलएलपी | Uttar Pradesh, H.NO 763 AG-32 PARK TOWN, COMERCIAL COMPLEX BAMHETA, GHAZIABAD
+       score=0.10 name_tsr=1.00 name_sort=0.67 name_skel=1.00 name_idf_jacc=0.62 addr_idf_jacc=0.85 addr_sort=1.00 num_shared_idf=5.38 num_conflict=0.00 addr_missing=0.00 translit=1.00 domain=0.00
+  Dream It Limited | No.56/21, Giriguja Enclave, Sastri Nagar, 1St Avenue, Adyar, Chennai, Tamil Nadu
+    -> டிரீம் ஐடி லிமிடெட் | No.56/21, Giriguja Enclave, Sastri Nagar, 1St Avenue, Adyar, Chennai, Ist Avenue, TN
+       score=0.61 name_tsr=0.26 name_sort=0.26 name_skel=0.38 name_idf_jacc=0.00 addr_idf_jacc=0.90 addr_sort=0.96 num_shared_idf=5.91 num_conflict=0.00 addr_missing=0.00 translit=1.00 domain=0.00
+  Sai Media | 463/1 Kamarajar Road Peelamedu, Coimbatore, Tamil Nadu
+    -> சாய் மீடியா | 463/1. Kamarajar Road Peelamedu, TN, Coimbatore
+       score=0.07 name_tsr=0.44 name_sort=0.44 name_skel=0.33 name_idf_jacc=0.00 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=8.33 num_conflict=0.00 addr_missing=0.00 translit=1.00 domain=0.00
+
+===== FALSE NEGATIVE: website-style name
+  Shyam Investments Private Limited | 27-A, Bahubali Nagar, Mansarover, Goliyawas, Jaipur, Rajasthan
+    -> SIPRIVATE.COM | 27-A, BAHUBALI NAGAR, MANSAROVER, GOLIYAWAS, JAIPUR, Rajasthan
+       score=0.61 name_tsr=0.31 name_sort=0.31 name_skel=0.24 name_idf_jacc=0.00 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=5.25 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=1.00
+  Chiplun Brands Private Limited | Bahadursheikh Naka, First Floor, Block No. 203, Ratnagiri, Maharashtra, Chiplun, Wangade Shopping Centre
+    -> Brandsprivate.Com | Wangade Shopping Centre, Chiplun, Ratnagiri, MH
+       score=0.44 name_tsr=0.52 name_sort=0.52 name_skel=0.63 name_idf_jacc=0.00 addr_idf_jacc=0.55 addr_sort=0.74 num_shared_idf=0.00 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=1.00
+  Sahil Tv Private Limited | 56, G/F, Church Road, Bhogal, New Delhi, Delhi
+    -> stprivate.com | 56, G/F, CHURCH ROAD, BHOGAL, NEW DELHI, Delhi
+       score=0.37 name_tsr=0.35 name_sort=0.35 name_skel=0.55 name_idf_jacc=0.00 addr_idf_jacc=1.00 addr_sort=1.00 num_shared_idf=5.91 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=1.00
+  Green Wireless Alliance | 11755 Birch Run Lane, Houston, TX
+    -> wirelessgreen.com | TX, HOUSTON, BIRCH RUN LANE
+       score=0.12 name_tsr=0.44 name_sort=0.44 name_skel=0.40 name_idf_jacc=0.00 addr_idf_jacc=0.66 addr_sort=1.00 num_shared_idf=0.00 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=1.00
+  Rev It Up Tavern | Columbia, Unit 922, MO, 2500 Old 63
+    -> RIUP.COM | 2500 OLD 63, COLUMBIA, MO
+       score=0.48 name_tsr=0.30 name_sort=0.30 name_skel=0.27 name_idf_jacc=0.00 addr_idf_jacc=0.76 addr_sort=1.00 num_shared_idf=8.72 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=1.00
+  Pasumai Technologies Private Limited | 5 Dr. Rajendra Prasad Sarani, 9Th Floor, Kolkata, Howrah, West Bengal
+    -> technologiespasumaiprivate.com | No 5 Dr. Rajendra Prasad Sarani, 9Th Floor, Kolkata, No Block, WB
+       score=0.30 name_tsr=0.52 name_sort=0.52 name_skel=0.52 name_idf_jacc=0.00 addr_idf_jacc=0.80 addr_sort=0.84 num_shared_idf=4.14 num_conflict=0.00 addr_missing=0.00 translit=0.00 domain=1.00

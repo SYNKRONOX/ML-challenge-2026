@@ -1,0 +1,23 @@
+[1/5] loading + normalizing (train, store mode)
+  source1: 2,206,821 rows (cached normalization)
+  source2: 5,034,616 rows (cached normalization)
+  source3: 5,285,603 rows (cached normalization)
+  building IDF / frequency tables
+  sampled Source 1 -> 109,970 rows
+[  1.1 min] [2/5] blocking index S2
+  [S2] usable keys: 19,976,857  other key rows: 74,598,627
+[  4.1 min] [S2] S1 chunk 1/2 rows 0-100,000: 3,973,032 pairs
+[  4.8 min] [S2] S1 chunk 2/2 rows 100,000-109,970: 397,028 pairs
+[  4.9 min] [2/5] blocking index S3
+  [S3] usable keys: 20,671,659  other key rows: 75,484,705
+[  7.9 min] [S3] S1 chunk 1/2 rows 0-100,000: 3,988,437 pairs
+[  8.3 min] [S3] S1 chunk 2/2 rows 100,000-109,970: 398,419 pairs
+[  8.4 min] candidate pairs: 8,756,916 (79.6 per S1)
+  blocking recall (ceiling): 0.9702  (369,424/380,789)
+  wrote C:\ML challenge\er_challenge\er_challenge\output\candidate_pairs.tsv (109,970 rows, 8,756,916 candidate pairs)
+[  8.6 min] [4/5] matching (rules) on 8,756,916 pairs
+  using tuned params from C:\ML challenge\er_challenge\er_challenge\output\best_params_rules.json
+  wrote C:\ML challenge\er_challenge\er_challenge\output\matching_results.tsv (109,970 rows)
+[  8.7 min] [5/5] evaluating
+  macro F0.5 = 0.8326 | mean precision 0.8764 | mean recall 0.8124 | singleton acc 0.6251 (6065 singletons)
+done in 8.7 min

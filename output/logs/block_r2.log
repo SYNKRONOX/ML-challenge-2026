@@ -1,0 +1,39 @@
+[1/5] loading + normalizing
+  source1: 2,206,821 rows — normalizing...
+  sampled Source 1 -> 109,970 rows
+  source2: 5,034,616 rows — normalizing...
+  source3: 5,285,603 rows — normalizing...
+[2/5] blocking S2
+  [S2] usable keys: 19,976,857  S1 key rows: 1,592,273  other key rows: 74,598,627
+  [S2] S1 rows 0-8,765: 347,336 pairs
+  [S2] S1 rows 8,765-17,453: 345,922 pairs
+  [S2] S1 rows 17,453-26,125: 345,103 pairs
+  [S2] S1 rows 26,125-34,917: 348,845 pairs
+  [S2] S1 rows 34,917-43,673: 347,730 pairs
+  [S2] S1 rows 43,673-52,259: 341,278 pairs
+  [S2] S1 rows 52,259-61,065: 349,500 pairs
+  [S2] S1 rows 61,065-69,778: 346,942 pairs
+  [S2] S1 rows 69,778-78,543: 348,360 pairs
+  [S2] S1 rows 78,543-87,187: 343,464 pairs
+  [S2] S1 rows 87,187-96,081: 352,259 pairs
+  [S2] S1 rows 96,081-104,815: 348,602 pairs
+  [S2] S1 rows 104,815-109,970: 204,916 pairs
+  S2: 4,370,257 pairs
+[2/5] blocking S3
+  [S3] usable keys: 20,671,659  S1 key rows: 1,589,915  other key rows: 75,484,705
+  [S3] S1 rows 0-8,837: 351,420 pairs
+  [S3] S1 rows 8,837-17,580: 349,476 pairs
+  [S3] S1 rows 17,580-26,338: 349,906 pairs
+  [S3] S1 rows 26,338-35,189: 352,803 pairs
+  [S3] S1 rows 35,189-44,019: 351,868 pairs
+  [S3] S1 rows 44,019-52,628: 343,599 pairs
+  [S3] S1 rows 52,628-61,536: 355,087 pairs
+  [S3] S1 rows 61,536-70,338: 351,861 pairs
+  [S3] S1 rows 70,338-79,137: 350,344 pairs
+  [S3] S1 rows 79,137-87,835: 347,024 pairs
+  [S3] S1 rows 87,835-96,793: 357,046 pairs
+  [S3] S1 rows 96,793-105,589: 351,960 pairs
+  [S3] S1 rows 105,589-109,970: 174,491 pairs
+  S3: 4,386,885 pairs
+  blocking recall: 0.9703  (369,485/380,789)  pairs: 8,757,142  (79.6 per S1)
+done in 14.5 min

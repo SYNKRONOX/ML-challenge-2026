@@ -1,0 +1,19 @@
+[1/5] loading + normalizing (train, stream mode)
+  source1: 2,206,821 rows (cached normalization)
+  source2: 5,034,616 rows (cached normalization)
+  source3: 5,285,603 rows (cached normalization)
+  building IDF / frequency tables
+  sampled Source 1 -> 10,731 rows
+  using tuned params from C:\ML challenge\er_challenge\er_challenge\output\best_params_ml.json
+  stream mode keeps pairs with stage-1 score >= 0.02
+[  1.1 min] [2/5] blocking index S2
+  [S2] usable keys: 19,976,857  other key rows: 74,598,627
+[  3.2 min] [S2] S1 chunk 1/1 rows 0-10,731: 425,355 pairs, kept 63,284 (17,497 true)
+[  3.4 min] [2/5] blocking index S3
+  [S3] usable keys: 20,671,659  other key rows: 75,484,705
+[  5.7 min] [S3] S1 chunk 1/1 rows 0-10,731: 426,991 pairs, kept 65,123 (18,743 true)
+[  5.8 min] candidate pairs: 852,346 (79.4 per S1)
+  blocking recall (ceiling): 0.9697  (36,240/37,372)
+  wrote C:\ML challenge\er_challenge\er_challenge\output\candidate_pairs.tsv (10,731 rows, 852,346 candidate pairs)
+  saved weighted training set: 128,407 pairs, 36,240 true, effective 855,355 -> run: python code/tune.py --matcher ml --eval-sample 20
+done in 5.9 min

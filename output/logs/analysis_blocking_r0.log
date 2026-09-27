@@ -1,0 +1,186 @@
+  source1: 2,206,821 rows — normalizing...
+true pairs 380,789  missed by blocking 27,011  recall 0.9291
+  source2: 5,034,616 rows — normalizing...
+  source3: 5,285,603 rows — normalizing...
+
+missed pairs by cause:
+  17,164   63.5%  cut by top-K cap
+   8,948   33.1%  keys only in oversized blocks
+     684    2.5%  no key: no shared name token
+     142    0.5%  no key: address missing
+      69    0.3%  no key: other
+       4    0.0%  no key: address missing + name differs
+
+=== cut by top-K cap
+  Best Gymkhana Private Limited | 1-2-234/2/1, Plo Part Srl Colony, Kothapet, Hyderabad, Telangana
+    -> 8est  Gymkhana Private Ltd | Block C-945 1-2-234/2/1, Hyderabad, TG
+       norm: 'best gymkhana' / 'colony hyderabad kothapet part plo srl' '1 2 234'  ||  '8est gymkhana' / 'block hyderabad' '1 2 234 945'
+  Aarvora Rubber Limited | 3Rd Floor, Trendz Sapphire, 3A, Plot No. 1-99/V/2, Vittal Rao Nagar, Shaikpet, Hyderabad, Telangana
+    -> Áarvora-Rubber-Limited | 3Rd Floor, null, Shaikpet, Hyderabad, TG
+       norm: 'aarvora rubber' / 'hyderabad ngr rao sapphire shaikpet trendz vittal' '1 2 3 99'  ||  'aarvora rubber' / 'hyderabad shaikpet' '3'
+  Lotus Infotech Private Limited | Venkateshwara Nilaya, Kini Layout Opp:Bharatiya Sabha Bhavana, R M L Nagar, Shimoga, Karnataka
+    -> Lotus Infotech | Venkateshwara Nilaya, Shimoga, KA
+       norm: 'lotus infotech' / 'bharatiya bhavana kini layout ngr nilaya sabha shimoga venkateshwara' ''  ||  'lotus infotech' / 'nilaya shimoga venkateshwara' ''
+  Payton Era Inc. | 1511 Frosty Drive, Unit APT 2, Ozark, MO
+    -> Payton Éra Inc. | 
+       norm: 'payton era' / 'dr frosty ozark' '1511 2'  ||  'payton era' / '' ''
+  Sree Producer Private Limited | B-108, Sector-50, Noida, Gautam Buddha Nagar, Uttar Pradesh
+    -> श्री प्रोड्यूसर प्राइवेट लिमिटेड | B-108, उत्तर प्रदेश, Noida, Gautam Buddha Nagar
+       norm: 'sree producer' / 'buddha gautam ngr noida sec' '108 50'  ||  'shrii proddyuusr' / 'buddha gautam ngr noida' '108'
+  Innovative Bombay Engineering Pvt Ltd | B-901, Ngos Colony, Vanasthalipuram, Hyderabad, Telangana
+    -> ఇన్నోవేటివ్ బాంబే ఇంజనీరింగ్ ప్రైవేట్ లిమిటెడ్ | B-901, HYDERABAD, Telangana
+       norm: 'innovative bombay engineering' / 'colony hyderabad ngos vanasthalipuram' '901'  ||  'innooveettiv baanbee injniiring' / 'hyderabad' '901'
+  Suryansh Lounge Private Limited | Flat No. 8, Sr.No. 223/A/1, Pl No. 83-85/A-B Madhav Residency, Vanashree Colony - 422, 010, Nashik, Maharashtra
+    -> Suryansh Lounge Private | No 8, Nashik, महाराष्ट्र
+       norm: 'suryansh lounge' / 'colony madhav nashik pl residency sr vanashree' '1 10 223 422 8 83 85'  ||  'suryansh lounge' / 'nashik' '8'
+  Noida Constructions Corporation | D-4 Sector-82, 128D, Noida, Gautam Buddha Nagar, Uttar Pradesh
+    -> Noida Corporation Services | 128D, D-4 SECTOR-82, NOIDA, Uttar Pradesh
+       norm: 'noida constructions' / 'buddha gautam ngr noida sec' '128 4 82'  ||  'noida services' / 'noida sec' '128 4 82'
+  Nolan & Weaver Inc. | 59 Rosedale Street, Unit APT 4, Lewiston, ME
+    -> Nolan + Wir Inc. | 
+       norm: 'nolan weaver' / 'lewiston rosedale st' '4 59'  ||  'nolan wir' / '' ''
+  Perfect South Consultants Limited | 29 Gf, Vikas Sheel Apartment Sector-13, Gh-09, Rohini, West Delhi, Delhi
+    -> परफेक्ट साउथ कंसल्टेंट्स लिमिटेड | 29 GF, WEST DELHI, ROHINI, Delhi
+       norm: 'perfect south consultants' / 'gf gh rohini sec sheel vikas w' '13 29 9'  ||  'prphektt saauth knslttentts' / 'gf rohini w' '29'
+
+=== keys only in oversized blocks
+  Cardiology Rocky Center LLC | OH, 208 Broadway Avenue, Youngstown
+    -> CARDIOLOGY  ROCKY CENTER LLC | 
+       norm: 'cardiology rocky center' / 'ave broadway youngstown' '208'  ||  'cardiology rocky center' / '' ''
+  West Creative End LLC | 2000 N Street, Unit 216, Washington, DC
+    -> West Ceratbie End LLC | 2000 N Street, # 216, Washington, District of Columbia
+       norm: 'west creative end' / 'n st' '2000 216'  ||  'west ceratbie end' / 'n st' '2000 216'
+  Platinum Atlanta Inc | 2936 34th Place, Unit 15, Phoenix, AZ
+    -> Platinum Arlanta (Inc) | 2936 34th Place, # 15, Arcadia, Arizona
+       norm: 'platinum atlanta' / 'phoenix pl' '15 2936 34'  ||  'platinum arlanta' / 'arcadia pl' '15 2936 34'
+  Valley Institute | 2791 Dolph Road, Dolph, AR
+    -> Valley Innsitmtute (ID: 16855) | 
+       norm: 'valley institute' / 'dolph rd' '2791'  ||  'valley innsitmtute id' / '' ''
+  Oncology Partners | 8018 Bryan Drive, Unit CONDO, Indianapolis, IN
+    -> Oncology Partners Inc. Enterprises | 
+       norm: 'oncology partners' / 'bryan condo dr indianapolis' '8018'  ||  'oncology partners enterprises' / '' ''
+  Coastal Association | 14 Audry Lane, VT, Westford
+    -> Coasta1 Association | 
+       norm: 'coastal association' / 'audry ln westford' '14'  ||  'coastai association' / '' ''
+  Shiva Technology Private Limited | Plot No 4, Sai Nagar Colony Secunderabad, Hyderabad, Telangana
+    -> శివా టెక్నాలజీ ప్రైవేట్ లిమిటెడ్ | Plot No B3/4, Hyderabad Urban, Hyderabad, తెలంగాణ
+       norm: 'shiva technology' / 'colony hyderabad ngr sai secunderabad' '4'  ||  'shivaa tteknaaljii' / 'hyderabad urban' '3 4'
+  Diamond Deli Inc | 1792 2767, Kilgore, TX
+    -> Diamond Deli | 1792 2767, Kiilgore Township, Texas
+       norm: 'diamond deli' / 'kilgore' '1792 2767'  ||  'diamond deli' / 'kiilgore' '1792 2767'
+  Heartland Skin Care | MA, Unit 12A, Cambridge, 1699 Cambridge Street
+    -> Heartland Skin Care Co | 699 CAMBRIDGE SAINT, CAMBRIDGE, MA
+       norm: 'heartland skin care' / 'cambridge st' '12 1699'  ||  'heartland skin care' / 'cambridge st' '699'
+  Rev It Up Nails | 345 Allister Drive, Raleigh, NC
+    -> Rev It Up Nails LP | 
+       norm: 'rev it up nails' / 'allister dr raleigh' '345'  ||  'rev it up nails' / '' ''
+
+=== no key: address missing
+  N+ Otg Inc | 12978 Jones Gap Road, Soddy Daisy, TN
+    -> N+ INC CENTER | 
+       norm: 'n otg' / 'daisy gap jones rd soddy' '12978'  ||  'n center' / '' ''
+  RG India Limited | Flat No. 6 Cts 1187/27 Ghole Rd Opp Kelkar Hosp Sn Ng, Pune, Maharashtra
+    -> RG India  Limited | 
+       norm: 'rg' / 'cts ghole hosp kelkar ng pune rd sn' '1187 27 6'  ||  'rg' / '' ''
+  Om & Co | Flat No. 4A, Tobacco House 1, Old Cout House, Kolkata, Kolkata, Howrah, West Bengal
+    -> Om & Co | 
+       norm: 'om' / 'cout house howrah kolkata old tobacco' '1 4'  ||  'om' / '' ''
+  Lc Visas Corporation | No-109, 2Nd Floor, Ashoka Nest Sidthatha School, Thippana, Kothanpur, Bangalore, Karnataka
+    -> Lc Visdhas Corporation | 
+       norm: 'lc visas' / 'ashoka bangalore kothanpur nest school sidthatha thippana' '109 2'  ||  'lc visdhas' / '' ''
+  L 9 H Fresenius | 120 Sky Harbor Drive, Murfreesboro, TN
+    -> L 9 H Center | 
+       norm: 'l 9 h fresenius' / 'dr harbor murfreesboro sky' '120'  ||  'l 9 h center' / '' ''
+  Shree It Limited | Aa- 45, 4Th Floor, Sree Tower, Vip Road, Kolkata, D B Nagr, North 24 Parganas, West Bengal
+    -> Shri Shree It Límited | 
+       norm: 'it' / 'aa kolkata n nagr parganas rd sree tower vip' '24 4 45'  ||  'it' / '' ''
+  Sm (India) India Limited | D- 4, Friends Apartment No. 49 I.P Extension, Patparganj, Delhi, East Delhi, Delhi
+    -> Sm (India) India | 
+       norm: 'sm' / 'e extension friends patparganj' '4 49'  ||  'sm' / '' ''
+  K+ Willow LLC | 1432 Bayberry Court, Chesapeake City, VA
+    -> K+ Wllrow LLC | 
+       norm: 'k willow' / 'bayberry chesapeake ct' '1432'  ||  'k wllrow' / '' ''
+  W+ Octave LLC | 2981 Western Star Drive, Heber, AZ
+    -> W+ LLC Service | 
+       norm: 'w octave' / 'dr heber star western' '2981'  ||  'w service' / '' ''
+  R+ Onfolio | 103 Anjeu Reuss Court, Dundalk, MD
+    -> R+ Center | 
+       norm: 'r onfolio' / 'anjeu ct dundalk reuss' '103'  ||  'r center' / '' ''
+
+=== no key: no shared name token
+  Blithe Eastman, O.D., DDS PC P.C. | 460 Town Road, Unit Apartment 22I, Brookhaven, NY
+    -> Orbizetafaye | 460 TOWN RD, PT JEFFERSON STTION, NY
+       norm: 'blithe eastman o d dds' / 'brookhaven rd' '22 460'  ||  'orbizetafaye' / 'jefferson pt rd sttion' '460'
+  Urban Care Private Limited | Shop No.-3, Kh No.- 46/1/2, Ph-1, Delhi, North West Delhi, Delhi
+    -> अर्बन केयर प्राइवेट लिमिटेड | SHOP NO.-3, KH NO.- 46/1/2, PH-1, DELHI, NORTH WEST DELHI, Delhi
+       norm: 'urban care' / 'kh n ph w' '1 2 3 46'  ||  'arbn keyr' / 'kh n ph w' '1 2 3 46'
+  Paulino & Lee Stone PLLC | 4315 74th Drive, Phoenix, AZ
+    -> Xylodrex | 4315c 74nd Drive, Maryvale, Arizona
+       norm: 'paulino lee stone' / 'dr phoenix' '4315 74'  ||  'xylodrex' / 'dr maryvale' '4315 74'
+  United Technology Private Limited | 5, Floor-2Nd, Plot- 20, Keshav Niwas, Laxmibai, Jagmohandas Marg, Nepean Sea Road, August Kranti Marg, Mumbai, Maharashtra
+    -> यूनाइटेड टेक्नोलॉजी प्राइवेट लिमिटेड | G-763 5, BOMBAY, Maharashtra
+       norm: 'united technology' / 'august jagmohandas keshav kranti laxmibai mumbai nepean niwas rd sea' '2 20 5'  ||  'yuunaaittedd tteknolonjii' / 'bombay' '5 763'
+  Health Association LLC | 111 Washington Street, Mount Vernon, NY
+    -> associationhealth.com | WASHINGTON STREET, MOUNT VERNON, NY
+       norm: 'health association' / 'mt st vernon' '111'  ||  'associationhealth' / 'mt st vernon' ''
+  Ss Ace Projects Pvt Ltd | 103, Flr No1, Wing 3, Shanti Garden Sec.6 Bld No3, 1 To 5 Chls, Behind Royal College, Thane, Maharashtra
+    -> एसएस एस प्रोजेक्ट्स प्रा. लि. | 103, Thane, MH
+       norm: 'ss ace projects' / 'behind bld chls college flr garden royal sec shanti thane to wing' '1 103 3 5 6'  ||  'eses es projektts' / 'thane' '103'
+  Unique Sree Food Limited | B-309, Gali No.25 Ashok Nagar, Shahdara, Delhi, North East, Delhi
+    -> यूनिक श्री फूड लिमिटेड | B-309, NORTH EAST, DELHI
+       norm: 'unique sree food' / 'ashok e gali n ngr shahdara' '25 309'  ||  'yuunik shrii phuudd' / 'e n' '309'
+  Future Software Private Limited | D-49, Second Floor, Satyawati Colony, Ashok Vihar, Phase-Iii, Delhi, North West, Delhi
+    -> फ्यूचर सॉफ्टवेयर प्राइवेट लिमिटेड | D-49, Delhi, DL
+       norm: 'future software' / '2nd ashok colony iii n phase satyawati vihar w' '49'  ||  'phyuucr sonphttveyr' / '' '49'
+  Gateway Academy | Kharavad Plot, Garbi Chowk Vistar Mota Chhakarma, Dhoraji, Rajkot, Gujarat
+    -> Kelosynecto | Kharavad Plot, Rajkot, GJ
+       norm: 'gateway academy' / 'chhakarma chowk dhoraji garbi kharavad mota rajkot vistar' ''  ||  'kelosynecto' / 'kharavad rajkot' ''
+  Aq Trust | Sitamarhi, Bihar, Baitha Niwas, Ward- 10, Vil-Pachra Nimahi, Panch-Pachra Nimahi, Block-Bajpatti, C/Okapileshwar Vaitha
+    -> taq.com | HN 573. C/OKAPILESHWAR VAITHA, MUZAFFARPUR REGION, Bihar
+       norm: 'aq trust' / 'baitha bajpatti block nimahi niwas okapileshwar pachra panch sitamarhi vaitha vil ward' '10'  ||  'taq' / 'hn muzaffarpur okapileshwar region vaitha' '573'
+
+=== no key: other
+  Om Engineering Pvt Ltd | Shop 1 And 2, Madras Pada, Ambethkar Nagar, Shimpoli, Borivali West, Mumbai, Maharashtra
+    -> ओम इंजीनियरिंग प्रा. लि. | SHOP 1  AND 2, GREATER BOMBAY, Maharashtra
+       norm: 'om engineering' / 'ambethkar borivali madras mumbai ngr pada shimpoli w' '1 2'  ||  'om injiiniyring' / 'bombay greater' '1 2'
+  #6 Pennymac Inc | 657 166, Middlefield, NY
+    -> #6 Inc Center | 657 166, COOPERSTOWN, NY
+       norm: '6 pennymac' / 'middlefield' '166 657'  ||  '6 center' / 'cooperstown' '166 657'
+  H K & I Medicine | 27 Kenwood Road, Dracut, MA
+    -> H K & I Mdricdei | Massachusetts, 11 Keowood Rd, Dracut
+       norm: 'h k i medicine' / 'dracut kenwood rd' '27'  ||  'h k i mdricdei' / 'dracut keowood rd' '11'
+  V+ Seafood LLC | 10823 Campbell Street, Kansas City, MO
+    -> V+ LLC Services (ID: 80825) | 10823 Campblel St, Kansas City, Missouri
+       norm: 'v seafood' / 'campbell st' '10823'  ||  'v services id' / 'campblel st' '10823'
+  O+ Solutions Corp | 6870 Kepler Road, Clinton, OH
+    -> O+ Corp Services | 8870 Kepler Rd, New Franklin, Ohio
+       norm: 'o solutions' / 'clinton kepler rd' '6870'  ||  'o services' / 'franklin kepler new rd' '8870'
+  D R&d Private Limited | 6-3-668/10/1, Aditya Apartments Durganagar Colony, Punjagu Tta, Hyderaba, D, Andhra Pradesh, Telangana
+    -> d r&d private limited | 6-3-668/10/1, Andhra Pradesh, D, Andhra Pradesh
+       norm: 'd r d' / 'aditya apartments colony durganagar hyderaba punjagu tta' '1 10 3 6 668'  ||  'd r d' / '' '1 10 3 6 668'
+  Al High Logistics Pvt Ltd | Ix/6538, Indra Gali, Gandhi Nagar, East Delhi, Delhi
+    -> अल हाई लॉजिस्टिक्स प्रा. लि. | IX/##6538, EAST DELHI, Delhi
+       norm: 'al high logistics' / 'e gali gandhi indra ix ngr' '6538'  ||  'al haaii lonjisttiks' / 'e ix' '6538'
+  # 8 KS Montreal | 60 Oregon Court, Oyster Bay, NY
+    -> # 8 (KS) | Syosset, #60 Oregon Ct, New York
+       norm: '8 ks montreal' / 'bay ct oyster' '60'  ||  '8 ks' / 'syosset' '60'
+  NP Lodging Corp | 207 West Street, Dadeville, AL
+    -> NP Ldcgang C0rp | WEST ST, AL, DADEVILLE
+       norm: 'np lodging' / 'dadeville st w' '207'  ||  'np ldcgang' / 'dadeville st w' ''
+  UF Limited, Inc | Stickney, 7016 43rd Street, IL
+    -> UF Limited, Ínc | 7016 43rd Steret, Berwyn CITY, Illinois
+       norm: 'uf' / 'st stickney' '43 7016'  ||  'uf' / 'berwyn steret' '43 7016'
+
+=== no key: address missing + name differs
+  India Group | Manjul, Second Floor, 4 - Sardar Nagar, Astron Chowk, Rajkot, Gujarat
+    -> India  Ltd | 
+       norm: 'group' / '2nd astron chowk manjul ngr rajkot sardar' '4'  ||  'india ltd' / '' ''
+  Shree Infotech Private Limited | 27/2, Bengal Ambuja, City Centre Durgapur, Durgapur, Bardhaman, West Bengal
+    -> Shree Infonech Private Limited | 
+       norm: 'infotech' / 'ambuja bardhaman bengal centre durgapur' '2 27'  ||  'infonech' / '' ''
+  Shree Services | Plot No.322, Saheed Nagar, Bhubaneswar, Khordha, Orissa
+    -> Shree Servnces | 
+       norm: 'services' / 'bhubaneswar khordha ngr saheed' '322'  ||  'servnces' / '' ''
+  Shree Trading Private Limited | E2/804, Golf City, Plot No. Gh-11, Sector-75, Noida, Gautam Buddha Nagar, Uttar Pradesh
+    -> Shree Tardig Private Limited | 
+       norm: 'trading' / 'buddha gautam gh golf ngr noida sec' '11 2 75 804'  ||  'tardig' / '' ''

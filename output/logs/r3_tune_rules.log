@@ -1,0 +1,23 @@
+8,757,116 candidate pairs, 369,450 true, 109,970 Source-1 entities
+  start F0.5=0.7736
+  round 1 MATCH_THRESHOLD      = 0.74    F0.5=0.7753
+  round 1 W_NAME               = 0.4     F0.5=0.7932
+  round 1 W_NAME_TRANSLIT      = 0.4     F0.5=0.7993
+  round 1 NUM_BONUS            = 0.2     F0.5=0.8055
+  round 1 NUM_PENALTY          = 0.4     F0.5=0.8065
+  round 1 NAME_ONLY_THRESHOLD  = 1.01    F0.5=0.8284
+  round 1 ADDR_ONLY_CONT       = 1.01    F0.5=0.8325
+  round 1 ADDR_ONLY_IDF        = 30.0    F0.5=0.8325
+  round 1 RELATIVE_MARGIN      = 0.3     F0.5=0.8325
+  round 2 MATCH_THRESHOLD      = 0.74    F0.5=0.8325
+  round 2 W_NAME               = 0.4     F0.5=0.8325
+  round 2 W_NAME_TRANSLIT      = 0.4     F0.5=0.8325
+  round 2 NUM_BONUS            = 0.2     F0.5=0.8325
+  round 2 NUM_PENALTY          = 0.4     F0.5=0.8325
+  round 2 NAME_ONLY_THRESHOLD  = 1.01    F0.5=0.8325
+  round 2 ADDR_ONLY_CONT       = 1.01    F0.5=0.8325
+  round 2 ADDR_ONLY_IDF        = 30.0    F0.5=0.8325
+  round 2 RELATIVE_MARGIN      = 0.3     F0.5=0.8325
+  macro F0.5 = 0.8325 | mean precision 0.8764 | mean recall 0.8124 | singleton acc 0.6251 (6065 singletons)
+best macro F0.5 on train = 0.8325
+saved C:\ML challenge\er_challenge\er_challenge\output\best_params_rules.json

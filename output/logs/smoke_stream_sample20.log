@@ -1,0 +1,25 @@
+[1/5] loading + normalizing (train, stream mode)
+  source1: 2,206,821 rows (cached normalization)
+  source2: 5,034,616 rows (cached normalization)
+  source3: 5,285,603 rows (cached normalization)
+  building IDF / frequency tables
+  sampled Source 1 -> 109,970 rows
+  using tuned params from C:\ML challenge\er_challenge\er_challenge\output\best_params_ml.json
+  stream mode keeps pairs with stage-1 score >= 0.02
+[  1.0 min] [2/5] blocking index S2
+  [S2] usable keys: 19,976,857  other key rows: 74,598,627
+[  3.9 min] [S2] S1 chunk 1/2 rows 0-100,000: 3,973,193 pairs, kept 193,936
+[  4.7 min] [S2] S1 chunk 2/2 rows 100,000-109,970: 397,058 pairs, kept 19,381
+[  4.8 min] [2/5] blocking index S3
+  [S3] usable keys: 20,671,659  other key rows: 75,484,705
+[  7.9 min] [S3] S1 chunk 1/2 rows 0-100,000: 3,988,541 pairs, kept 205,264
+[  8.6 min] [S3] S1 chunk 2/2 rows 100,000-109,970: 398,382 pairs, kept 20,451
+[  8.7 min] candidate pairs: 8,757,174 (79.6 per S1)
+  blocking recall (ceiling): 0.9702  (369,428/380,789)
+  wrote C:\ML challenge\er_challenge\er_challenge\output\candidate_pairs.tsv (109,970 rows, 8,757,174 candidate pairs)
+[  8.9 min] [4/5] matching (ml) on 439,032 pairs
+  using tuned params from C:\ML challenge\er_challenge\er_challenge\output\best_params_ml.json
+  wrote C:\ML challenge\er_challenge\er_challenge\output\matching_results.tsv (109,970 rows)
+[  9.0 min] [5/5] evaluating
+  macro F0.5 = 0.9732 | mean precision 0.9945 | mean recall 0.9377 | singleton acc 0.9799 (6065 singletons)
+done in 9.0 min

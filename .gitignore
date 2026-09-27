@@ -1,0 +1,16 @@
+# raw data (large, provided by the organisers) and local environment
+data/
+.venv/
+__pycache__/
+*.pyc
+
+# large or regenerable pipeline artefacts
+submission.zip
+output/cache/
+output/candidate_pairs.tsv
+output/features_*.pkl
+output/cand_ids_*.pkl
+output/s1_ids_*.pkl
+output/oof_ml.npy
+output/model_r4.pkl
+output/best_params_ml_r4.json

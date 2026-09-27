@@ -1,0 +1,53 @@
+[1/5] loading + normalizing (test, stream mode)
+  source1: 1,732,544 rows — normalizing...
+  source2: 4,887,273 rows — normalizing...
+  source3: 5,082,316 rows — normalizing...
+  building IDF / frequency tables
+  using tuned params from C:\ML challenge\er_challenge\er_challenge\output\best_params_ml.json
+  stream mode keeps pairs with stage-1 score >= 0.02
+[  5.7 min] [2/5] blocking index S2
+  [S2] usable keys: 19,011,974  other key rows: 79,738,880
+[  8.9 min] [S2] S1 chunk 1/18 rows 0-100,000: 4,043,647 pairs, kept 215,828
+[ 10.5 min] [S2] S1 chunk 2/18 rows 100,000-200,000: 4,042,196 pairs, kept 215,134
+[ 12.0 min] [S2] S1 chunk 3/18 rows 200,000-300,000: 4,041,851 pairs, kept 214,676
+[ 13.4 min] [S2] S1 chunk 4/18 rows 300,000-400,000: 4,041,560 pairs, kept 215,055
+[ 14.9 min] [S2] S1 chunk 5/18 rows 400,000-500,000: 4,044,066 pairs, kept 215,169
+[ 16.3 min] [S2] S1 chunk 6/18 rows 500,000-600,000: 4,044,818 pairs, kept 215,864
+[ 17.8 min] [S2] S1 chunk 7/18 rows 600,000-700,000: 4,042,829 pairs, kept 214,913
+[ 19.3 min] [S2] S1 chunk 8/18 rows 700,000-800,000: 4,044,687 pairs, kept 215,200
+[ 20.8 min] [S2] S1 chunk 9/18 rows 800,000-900,000: 4,044,415 pairs, kept 214,491
+[ 22.2 min] [S2] S1 chunk 10/18 rows 900,000-1,000,000: 4,040,607 pairs, kept 215,416
+[ 23.7 min] [S2] S1 chunk 11/18 rows 1,000,000-1,100,000: 4,044,010 pairs, kept 215,114
+[ 25.2 min] [S2] S1 chunk 12/18 rows 1,100,000-1,200,000: 4,046,231 pairs, kept 214,683
+[ 26.6 min] [S2] S1 chunk 13/18 rows 1,200,000-1,300,000: 4,045,199 pairs, kept 215,893
+[ 28.1 min] [S2] S1 chunk 14/18 rows 1,300,000-1,400,000: 4,042,628 pairs, kept 215,540
+[ 29.6 min] [S2] S1 chunk 15/18 rows 1,400,000-1,500,000: 4,043,381 pairs, kept 215,583
+[ 31.0 min] [S2] S1 chunk 16/18 rows 1,500,000-1,600,000: 4,042,853 pairs, kept 213,917
+[ 32.5 min] [S2] S1 chunk 17/18 rows 1,600,000-1,700,000: 4,047,344 pairs, kept 215,184
+[ 33.4 min] [S2] S1 chunk 18/18 rows 1,700,000-1,732,544: 1,317,327 pairs, kept 70,181
+[ 33.6 min] [2/5] blocking index S3
+  [S3] usable keys: 19,410,254  other key rows: 78,544,988
+[ 36.7 min] [S3] S1 chunk 1/18 rows 0-100,000: 4,063,540 pairs, kept 225,506
+[ 38.2 min] [S3] S1 chunk 2/18 rows 100,000-200,000: 4,060,393 pairs, kept 226,045
+[ 39.7 min] [S3] S1 chunk 3/18 rows 200,000-300,000: 4,058,570 pairs, kept 226,575
+[ 41.1 min] [S3] S1 chunk 4/18 rows 300,000-400,000: 4,058,915 pairs, kept 225,598
+[ 42.6 min] [S3] S1 chunk 5/18 rows 400,000-500,000: 4,060,834 pairs, kept 225,023
+[ 44.1 min] [S3] S1 chunk 6/18 rows 500,000-600,000: 4,063,249 pairs, kept 225,994
+[ 45.5 min] [S3] S1 chunk 7/18 rows 600,000-700,000: 4,061,235 pairs, kept 226,039
+[ 47.0 min] [S3] S1 chunk 8/18 rows 700,000-800,000: 4,063,786 pairs, kept 225,777
+[ 48.5 min] [S3] S1 chunk 9/18 rows 800,000-900,000: 4,061,445 pairs, kept 225,916
+[ 49.9 min] [S3] S1 chunk 10/18 rows 900,000-1,000,000: 4,057,647 pairs, kept 226,192
+[ 51.4 min] [S3] S1 chunk 11/18 rows 1,000,000-1,100,000: 4,059,142 pairs, kept 225,800
+[ 52.9 min] [S3] S1 chunk 12/18 rows 1,100,000-1,200,000: 4,063,966 pairs, kept 224,997
+[ 54.3 min] [S3] S1 chunk 13/18 rows 1,200,000-1,300,000: 4,063,518 pairs, kept 225,777
+[ 55.8 min] [S3] S1 chunk 14/18 rows 1,300,000-1,400,000: 4,061,063 pairs, kept 226,888
+[ 57.3 min] [S3] S1 chunk 15/18 rows 1,400,000-1,500,000: 4,062,479 pairs, kept 226,040
+[ 58.7 min] [S3] S1 chunk 16/18 rows 1,500,000-1,600,000: 4,060,113 pairs, kept 225,342
+[ 60.2 min] [S3] S1 chunk 17/18 rows 1,600,000-1,700,000: 4,064,314 pairs, kept 225,231
+[ 61.1 min] [S3] S1 chunk 18/18 rows 1,700,000-1,732,544: 1,322,923 pairs, kept 74,028
+[ 61.3 min] candidate pairs: 140,426,781 (81.1 per S1)
+  wrote C:\ML challenge\er_challenge\er_challenge\output\candidate_pairs.tsv (1,732,544 rows, 140,426,781 candidate pairs)
+[ 61.8 min] [4/5] matching (ml) on 7,640,609 pairs
+  using tuned params from C:\ML challenge\er_challenge\er_challenge\output\best_params_ml.json
+  wrote C:\ML challenge\er_challenge\er_challenge\output\matching_results.tsv (1,732,544 rows)
+done in 63.3 min

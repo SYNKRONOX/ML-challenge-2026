@@ -1,0 +1,12 @@
+8,143,202 candidate pairs, 353,778 true, 109,970 Source-1 entities
+  fold 0 trained
+  fold 1 trained
+  start F0.5=0.9144
+  round 1 MATCH_THRESHOLD      = 0.6     F0.5=0.9154
+  round 1 RELATIVE_MARGIN      = 0.3     F0.5=0.9169
+  round 2 MATCH_THRESHOLD      = 0.6     F0.5=0.9169
+  round 2 RELATIVE_MARGIN      = 0.3     F0.5=0.9169
+  out-of-fold macro F0.5 = 0.9169 | mean precision 0.9748 | mean recall 0.8416 | singleton acc 0.8780 (6065 singletons)
+  saved C:\ML challenge\er_challenge\er_challenge\output\model.pkl
+best macro F0.5 on train = 0.9169
+saved C:\ML challenge\er_challenge\er_challenge\output\best_params_ml.json

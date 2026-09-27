@@ -1,0 +1,5 @@
+25% of train fold (1/8 of sample)        train rows 1,087,389  F0.5 0.9559  (18s, iters 265)
+50% of train fold                        train rows 2,194,601  F0.5 0.9572  (20s, iters 202)
+100% of train fold (default)             train rows 4,379,458  F0.5 0.9592  (43s, iters 274)
+100%, 600 iters lr .1                    train rows 4,379,458  F0.5 0.9592  (43s, iters 274)
+100%, 1000 iters lr .05 leaves 127       train rows 4,379,458  F0.5 0.9598  (72s, iters 411)

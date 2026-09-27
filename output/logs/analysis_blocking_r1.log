@@ -1,0 +1,217 @@
+candidates from cand_ids_train.pkl
+  source1: 2,206,821 rows (cached normalization)
+true pairs 380,789  missed by blocking 13,369  recall 0.9649
+  source2: 5,034,616 rows (cached normalization)
+  source3: 5,285,603 rows (cached normalization)
+
+missed pairs by cause:
+   9,816   73.4%  cut by top-K cap
+   2,864   21.4%  keys only in oversized blocks
+     541    4.0%  no key: no shared name token
+     107    0.8%  no key: address missing
+      37    0.3%  no key: other
+       4    0.0%  no key: address missing + name differs
+
+=== cut by top-K cap
+  Premier Properties Pvt Ltd | Kalikapur, Taki Road, Barasat Near George Telegraph Training Institute, Kolkata, Parganas North, West Bengal
+    -> Premier Pr0ptiss Pvt Ltd | Kalikapur, North 24 Paraganas, Parganas North, পশ্চিমবঙ্গ
+       norm: 'premier properties' / 'barasat george institute kalikapur kolkata n parganas rd taki telegraph training' ''  ||  'premier proptiss' / 'kalikapur n paraganas parganas' '24'
+  Elite Coastal Development | 161 Cerullo Road, Shinnston, WV
+    -> Elite Coastal | 
+       norm: 'elite coastal development' / 'cerullo rd shinnston' '161'  ||  'elite coastal' / '' ''
+  Creative Global Private Limited | P No 156 To 163, 18-155/10/104, Hanumanpet, Malkagiri, Rangareddy, Hyderabad, Telangana
+    -> క్రియేటివ్ గ్లోబల్ ప్రైవేట్ లిమిటెడ్ | P No 00156 To 163, Rangareddy, Hyderabad, TG
+       norm: 'creative global' / 'hanumanpet hyderabad malkagiri rangareddy to' '10 104 155 156 163 18'  ||  'kriyeettiv gloobl' / 'hyderabad rangareddy to' '156 163'
+  Ninadyne Company | 815 7th Street, MN, Two Harbors
+    -> Mirafluxbelo | SEVENTH ST, TWO HARBORS, MN
+       norm: 'ninadyne' / 'harbors st two' '7 815'  ||  'mirafluxbelo' / 'harbors seventh st two' ''
+  Aditya Hospitality Private Limited | P No.11, Scheme No.8, Devi Nagar, New Sanganer Road, Jaipur, Rajasthan
+    -> आदित्य हॉस्पिटैलिटी प्राइवेट लिमिटेड | P NO.G-11, JAIPUR, JAIPUR M CORP, राजस्थान
+       norm: 'aditya hospitality' / 'devi jaipur new ngr rd sanganer scheme' '11 8'  ||  'aadity honspittailittii' / 'corp jaipur' '11'
+  Cornerstone Inc. | 8700 Petticoat Hill Road, Vancouver, WA
+    -> cornerstone inc. | 
+       norm: 'cornerstone' / 'hill petticoat rd vancouver' '8700'  ||  'cornerstone' / '' ''
+  Lily Traders Pvt Ltd | Fe - 362, Ground Floor Sector - Iii, Salt Lake, Kolkata, Howrah, West Bengal
+    -> Li1y Traders Pvt Ltd | FE - 362, CALCUTTA, HOWRAH, West Bengal
+       norm: 'lily traders' / 'fe ground howrah iii kolkata lake salt sec' '362'  ||  'liiy traders' / 'calcutta fe howrah' '362'
+  Dynamic Marketing Limited | Haveli, Sr No 100, Nr. Elite Veerbhadra Nagar, Pune City, Maharashtra, Pune
+    -> dynamic marketing limited | Sr No 100, Pune, Balewadi, MH
+       norm: 'dynamic marketing' / 'elite haveli ngr pune sr veerbhadra' '100'  ||  'dynamic marketing' / 'balewadi pune sr' '100'
+  Balaji & Partners Private Limited | 54/7, Third Floor, Desh Bandhu Gupta Road Karol Bagh, Delhi, Central Delhi, Delhi
+    -> Balaji & Partners Private  Limited | 
+       norm: 'balaji partners' / '3rd bagh bandhu central desh gupta karol rd' '54 7'  ||  'balaji partners' / '' ''
+  Aditya Finance Limited | P. No-64, Ep Khushi Enclave B, Mansarover, Ganpatpura, Sanganer, Jaipur, Rajasthan
+    -> आदित्य फाइनेंस लिमिटेड | P. NO-64, JAIPUR, MUHANA, Rajasthan
+       norm: 'aditya finance' / 'enclave ep ganpatpura jaipur khushi mansarover sanganer' '64'  ||  'aadity phaainens' / 'jaipur muhana' '64'
+  Sirius Co | Harrisburg, Fl 1, 9201 Evert School Road, MO
+    -> Sirius Company | 
+       norm: 'sirius' / 'evert harrisburg rd school' '1 9201'  ||  'sirius' / '' ''
+  One Technologies Private Limited | 201 Mahavir Complex, Derasan Lane, Ghatkoper E, Mumbai, Maharashtra
+    -> वन टेक्नोलॉजीज प्राइवेट लिमिटेड | MAHAVIR COMPLEX, MUMBAI, Maharashtra
+       norm: 'one technologies' / 'complex derasan e ghatkoper ln mahavir mumbai' '201'  ||  'vn tteknolonjiij' / 'complex mahavir mumbai' ''
+
+=== keys only in oversized blocks
+  Shakti Exports Pvt Ltd | D-1, Maithree Apts, No. 96, 6Th Main Malleshwaram, Bangalore, Karnataka
+    -> ಶಕ್ತಿ ಎಕ್ಸ್‌ಪೋರ್ಟ್ಸ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್ | H.NO 202 D-1, BANGALORE, ಕರ್ನಾಟಕ
+       norm: 'shakti exports' / 'apts bangalore main maithree malleshwaram' '1 6 96'  ||  'shkti ekspoortts' / 'bangalore' '1 202'
+  Future Ventures Private Limited | C/Ogurtejpalsingh, Officer, Colony Near Happy Baba Ji, Malerkotla, Sangrur, Punjab
+    -> ਫਿਊਚਰ Ventures Private Limited | #115. C/OGURTEJPALSINGH, AHMEDGARH, Punjab
+       norm: 'future ventures' / 'baba colony happy ji malerkotla officer ogurtejpalsingh sangrur' ''  ||  'phiuucr ventures' / 'ahmedgarh ogurtejpalsingh' '115'
+  Bay Spruce | 1500 Auline Lane, Unit C, Houston, TX
+    -> Bay Spie | 
+       norm: 'bay spruce' / 'auline houston ln' '1500'  ||  'bay spie' / '' ''
+  Krishna Media Private Limited | 23, Sn 1313, K-24 Bhagyanagar, Old Jalna, Jalna, Maharashtra
+    -> Krishna Private Limited  Center | 25, Jalna, MH
+       norm: 'krishna media' / 'bhagyanagar jalna old sn' '1313 23 24'  ||  'krishna center' / 'jalna' '25'
+  Physical Therapy Specialists Inc | 777 Haywood Road, Asheville, NC
+    -> Inc Physical Teriapy Specialists | Haywood Road, Ashevile, North Carolina
+       norm: 'physical therapy specialists' / 'asheville haywood rd' '777'  ||  'physical teriapy specialists' / 'ashevile haywood rd' ''
+  Legacy Homes | 2205 Stokebridge Road, Springfield, IL
+    -> Legacy Cénter | 
+       norm: 'legacy homes' / 'rd springfield stokebridge' '2205'  ||  'legacy center' / '' ''
+  Gold Construction Private Limited | 3Rd Floor, Dgp House, 88-C, Old Prabhadevi Road, Mumbai, Maharashtra
+    -> Gold Private Limited Services & Co | 
+       norm: 'gold construction' / 'dgp house mumbai old prabhadevi rd' '3 88'  ||  'gold services' / '' ''
+  Trusted Citigroup Inc | 383 64, Unit 5, Plymouth, NC
+    -> Trusted Inc Service | 64, PLYMOUHT, NC
+       norm: 'trusted citigroup' / 'plymouth' '383 5 64'  ||  'trusted service' / 'plymouht' '64'
+  My Power Limited | 15, J.C. Road, Bangalore, Karnataka
+    -> My Limited [Center] | Bengaluru, Bangalore, KA, J.c. Road, 15.
+       norm: 'my power' / 'bangalore rd' '15'  ||  'my center' / 'bangalore bengaluru rd' '15'
+  Shiv Impex Private Limited | 338/21 Hari Om Marg, Bhajan Ganj, Ajmer, Rajasthan
+    -> Shiv Private  Limited Partners | 
+       norm: 'shiv impex' / 'ajmer bhajan ganj hari om rd' '21 338'  ||  'shiv partners' / '' ''
+  Impex Law Chambers Ltd | Haryana, Gurgaon, Unitechbusinesszone Sec50, Gurgaon, Unit 612 6 Floor Tower 1
+    -> lmpex Law Chambers [Limited] | Unit 61 6 Floor Tower 1, Gurgaon, HR
+       norm: 'impex law chambers' / 'gurgaon sec tower unitechbusinesszone' '1 50 6 612'  ||  'lmpex law chambers' / 'gurgaon tower' '1 6 61'
+  Apex Systems Private Limited | 1St And 2Nd Floor, 3 Chowringhee Terace, Kolkata, Kolkata, Howrah, West Bengal
+    -> অ্যাপেক্স সিস্টেমস প্রাইভেট লিমিটেড | 1St And 2Nd Floor, Kolkata, Howrah, WB
+       norm: 'apex systems' / 'chowringhee howrah kolkata terace' '1 2 3'  ||  'ayaapeks sisttems praaibhett' / 'howrah kolkata' '1 2'
+
+=== no key: address missing
+  H+ International LLC | 23 Russell Drive, New Concord, KY
+    -> H+ Inrationl LLC | 
+       norm: 'h international' / 'concord dr new russell' '23'  ||  'h inrationl' / '' ''
+  ET Records | 1111Kailsah Building K G Marg C P, New Delhi, Delhi
+    -> ET Retods | 
+       norm: 'et records' / 'building kailsah new rd' '1111'  ||  'et retods' / '' ''
+  LN Realcon Private Limited | I84 Lenin Sarani, 2Nd Floor Daw Building, Kolkata, Howrah, West Bengal
+    -> LN Reaclcon Private Limited | 
+       norm: 'ln realcon' / 'building daw howrah kolkata lenin sarani' '2 84'  ||  'ln reaclcon' / '' ''
+  Ss Tech Limited | Tamil Nadu, No 89, Chennai, Tondiarpet Fort St George, Narayana Mudali Street
+    -> Ss Limited Partners | 
+       norm: 'ss tech' / 'chennai fort george mudali narayana st tondiarpet' '89'  ||  'ss partners' / '' ''
+  Om Trading Company | Plot No. C-54, Panchavati, Colony, Manikonda, Rangareddy, Telangana
+    -> Om Traeidg Company | 
+       norm: 'om trading' / 'colony manikonda panchavati rangareddy' '54'  ||  'om traeidg' / '' ''
+  Om Auto LLP | 063 Ist Floor Udyog Vihar, Ecotech Ii, Greater Noida, Bishrakh, Gautam Buddha Nagar, Uttar Pradesh
+    -> Om LLP Services Services | 
+       norm: 'om auto' / 'bishrakh buddha ecotech gautam greater ii ist ngr noida udyog vihar' '63'  ||  'om services' / '' ''
+  Mg Foundation Limited | 27B, Bose Pukur Road 1St Floor, Kolkata, Howrah, West Bengal
+    -> Mg Fuotndation Limited | 
+       norm: 'mg foundation' / 'bose howrah kolkata pukur rd' '1 27'  ||  'mg fuotndation' / '' ''
+  K+ Willow LLC | 1432 Bayberry Court, Chesapeake City, VA
+    -> K+ Wllrow LLC | 
+       norm: 'k willow' / 'bayberry chesapeake ct' '1432'  ||  'k wllrow' / '' ''
+  F+ Mid, L.L.C. | 108 Castle Court, Tipton, IN
+    -> F+ L.L.C. Services | 
+       norm: 'f mid' / 'castle ct tipton' '108'  ||  'f services' / '' ''
+  CP Mills Pvt Ltd | House No- 24, Patel Pura Wardbhandara Bhandara, Mumbai, Bhandara, Maharashtra
+    -> CP Pvt Ltd Services | 
+       norm: 'cp mills' / 'bhandara house mumbai patel pura wardbhandara' '24'  ||  'cp services' / '' ''
+  Bp Agencies LLP | C/O Kamlesh Sahu, Khasra, No. 1476, Aklera Road, Jhalawar, Rajasthan
+    -> Bp Agebis  LLP | 
+       norm: 'bp agencies' / 'aklera jhalawar kamlesh khasra rd sahu' '1476'  ||  'bp agebis' / '' ''
+  Om Services Private Limited | House No.1/597A Ezhuthanikattu H, Manary Po Paipra Muvattuzha, Muvattupuzha, Ernakulam, Kerala
+    -> Om Sermcictes Private Limited | 
+       norm: 'om services' / 'ernakulam ezhuthanikattu house manary muvattupuzha muvattuzha paipra' '1 597'  ||  'om sermcictes' / '' ''
+
+=== no key: no shared name token
+  Mumbai Deposit Care | Ec 7050, Bharat Diamond Bourse G Block, Bandra Kurla Complex Bandra Eas, T, Mumbai, Mumbai City, Maharashtra
+    -> Onyxnex | Ec 7050, Mumbai, Mumbai City, MH
+       norm: 'mumbai deposit care' / 'bandra bharat block bourse complex diamond eas ec kurla mumbai' '7050'  ||  'onyxnex' / 'ec mumbai' '7050'
+  Shree Consulting Pvt Ltd | 08, 3Rd Floor, 222/224, Shankeshwar Society, Mumbai, Maharashtra
+    -> श्री कंसल्टिंग प्रा. लि. | 08, MUMBAI, Maharashtra
+       norm: 'consulting' / 'mumbai shankeshwar society' '222 224 3 8'  ||  'shrii knsltting' / 'mumbai' '8'
+  Bombay Infotech Private Limited | Plot No 58, Mardur Town, Tiruvallur, Tamil Nadu
+    -> பம்பாய் இன்ஃபோடெக் பிரைவேட் லிமிடெட் | 79, Velliyur, TN
+       norm: 'bombay infotech' / 'mardur tiruvallur' '58'  ||  'pmpaay innnhpoottek limittett' / 'velliyur' '79'
+  Schenker Copley LLC | 398 Oak Lane, Justice, IL
+    -> Nylalyra | OAK LANE, LYONS TWP, IL
+       norm: 'schenker copley' / 'justice ln oak' '398'  ||  'nylalyra' / 'ln lyons oak twp' ''
+  One Finance Pvt Ltd | 6/76, Street No.2, 3Rd Floor, Left Side, Vishwas Nagar, Shahdara, Delhi, North East, Delhi
+    -> वन फाइनेंस प्रा. लि. | NO. 8-67 6/76, DELHI, NORTH EAST, Delhi
+       norm: 'one finance' / 'e left n ngr shahdara side st vishwas' '2 3 6 76'  ||  'vn phaainens' / 'e n' '6 67 76 8'
+  New Consulting Private Limited | Du- 176 Pitampura, Delhi, North West, Delhi
+    -> न्यू कंसल्टिंग प्राइवेट लिमिटेड | Du- 17 Pitampura, Delhi, North West, DL
+       norm: 'new consulting' / 'du n pitampura w' '176'  ||  'nyuu knsltting' / 'du n pitampura w' '17'
+  High Impex LLP | Delhi, B-5/140, East Delhi, Yamuna Vihar, Delhi
+    -> हाई इम्पेक्स एलएलपी | PLOT B3/521 B-5/140, EAST DELHI, DELHI, दिल्ली
+       norm: 'high impex' / 'e vihar yamuna' '140 5'  ||  'haaii impeks elelpii' / 'e' '140 3 5 521'
+  Blue Industries Private Limited | 1240, Chah Rahat Gali Guliyan, Delhi
+    -> ब्लू इंडस्ट्रीज प्राइवेट लिमिटेड | DOR NO 966 1240, CENTRAL DELHI, Delhi
+       norm: 'blue industries' / 'chah gali guliyan rahat' '1240'  ||  'bluu inddsttriij' / 'central dor' '1240 966'
+  Nagam Industries Private Limited | 127, G/F, Shreshtha Vihar Near Dav Shreshtha Vihar, School, Delhi, East Delhi, Delhi
+    -> Fayexylozeta | 127/5, EAST DELHI, DELHI, दिल्ली
+       norm: 'nagam industries' / 'dav e school shreshtha vihar' '127'  ||  'fayexylozeta' / 'e' '127 5'
+  Aq Trust | Sitamarhi, Bihar, Baitha Niwas, Ward- 10, Vil-Pachra Nimahi, Panch-Pachra Nimahi, Block-Bajpatti, C/Okapileshwar Vaitha
+    -> taq.com | HN 573. C/OKAPILESHWAR VAITHA, MUZAFFARPUR REGION, Bihar
+       norm: 'aq trust' / 'baitha bajpatti block nimahi niwas okapileshwar pachra panch sitamarhi vaitha vil ward' '10'  ||  'taq' / 'hn muzaffarpur okapileshwar region vaitha' '573'
+  Total Harvard | 716 8th Street, Moorhead, MN
+    -> tharvardcom | Eighth Street, Moorhead, Minnesota
+       norm: 'total harvard' / 'moorhead st' '716 8'  ||  'tharvardcom' / 'eighth moorhead st' ''
+  Surya Business | G-7, B.M. Tower, Sapna Sangeeta Road, Opp. Lotus Showroom, Indore, Madhya Pradesh
+    -> सूर्या बिजनेस | G-7, KHARGONE, Madhya Pradesh
+       norm: 'surya business' / 'indore lotus rd sangeeta sapna showroom tower' '7'  ||  'suuryaa bijnes' / 'khargone' '7'
+
+=== no key: other
+  Al Care Private Limited | Doorno.1Wheatcroftsroad, Nungambakkam, Chennai, Geegeeplaza, Tamil Nadu, Chennai
+    -> அல் கேர் பிரைவேட் லிமிடெட் | CHENNAI, Tamil Nadu, CHENNAI, GEEGEMPLAZA
+       norm: 'al care' / 'chennai doorno geegeeplaza nungambakkam wheatcroftsroad' '1'  ||  'al keer limittett' / 'chennai geegemplaza' ''
+  #7 Food Inc. | 2930 Coley Road, Elizabethtown, NC
+    -> #7 ÍNC. PARTNERS | CLARKTON, 930 COLEY RD, NC
+       norm: '7 food' / 'coley elizabethtown rd' '2930'  ||  '7 partners' / 'clarkton coley rd' '930'
+  QE Business Corporation | Dda Flats Pocket A, Sukh Dev Vihar New Friends Colony, Delhi, 16-A, South Delhi
+    -> (Corporation) QE Buiss | No. 65 16-A, South Delhi, दिल्ली
+       norm: 'qe business' / 'colony dda dev flats friends new pocket s sukh vihar' '16'  ||  'qe buiss' / 's' '16 65'
+  EQ Virginia | 618 Titan Drive, Ofallon, IL
+    -> EQ Virnia | 616 Titan Dr, O Faallon CITY, Illinois
+       norm: 'eq virginia' / 'dr ofallon titan' '618'  ||  'eq virnia' / 'dr faallon titan' '616'
+  Q+ Myers Inc. | 608 Pine Street, Crawford, NE
+    -> Q+ Melrtyrs Inc. | 08 Pine Saint, Carwford, Nebraska
+       norm: 'q myers' / 'crawford pine st' '608'  ||  'q melrtyrs' / 'carwford pine st' '8'
+  Adina's Grading | 100 Peachtree Road, Unit 9, Asheville, NC
+    -> ADlNA'S  CENTER | 201 PEACHTREE RD, ASHEEVILLE CDP, NC
+       norm: 'adina s grading' / 'asheville peachtree rd' '100 9'  ||  'adlna s center' / 'asheeville cdp peachtree rd' '201'
+  RF Pelican P.C. | 5919 Pinehurst Court, Hamburg, NY
+    -> RF PCEAN P.C. | PINEHURST COURT, LAKE VIEW, NY
+       norm: 'rf pelican' / 'ct hamburg pinehurst' '5919'  ||  'rf pcean' / 'ct lake pinehurst view' ''
+  VI Project Private Limited | C/O, Shipra Rahul Gugaliya, Duplex No 6 Leverage Greens, Khaparkheda, Nagpur, Maharashtra
+    -> VI Private Limited Center | C/o, Nagpur, MH
+       norm: 'vi project' / 'duplex greens gugaliya khaparkheda leverage nagpur rahul shipra' '6'  ||  'vi center' / 'nagpur' ''
+  Al High Logistics Pvt Ltd | Ix/6538, Indra Gali, Gandhi Nagar, East Delhi, Delhi
+    -> अल हाई लॉजिस्टिक्स प्रा. लि. | IX/##6538, EAST DELHI, Delhi
+       norm: 'al high logistics' / 'e gali gandhi indra ix ngr' '6538'  ||  'al haaii lonjisttiks' / 'e ix' '6538'
+  Jp Vidyut Private Limited | Flat No. Iii- B, #5, 13 Th A Cross, Ii Nd Block Jaya Nagar, Bangalore, Karnataka
+    -> Jp Private Limited Services | Flat No. Iii- B, Jayanagar, KA
+       norm: 'jp vidyut' / 'bangalore block cross ii iii jaya ngr th' '13 5'  ||  'jp services' / 'iii jayanagar' ''
+  Ss Ice Pvt Ltd | # 1003, 2Nd Cross, 12Th A Main, Hal 2Nd Stage, Bangalore, Karnataka
+    -> Ltd Ss Pvt Center | BANGALORE, Karnataka, NO, BANGALORE
+       norm: 'ss ice' / 'bangalore cross hal main stage' '1003 12 2'  ||  'ss center' / 'bangalore' ''
+  IW Resorts Pvt. Ltd. | Flat No. 403, Build-A13 Nanded City, Sinhgad Road, Pune, Maharashtra
+    -> IW Reosnrts Pvt Ltd | www.iwreosnrt.com | 40, Pune, MH
+       norm: 'iw resorts' / 'build nanded pune rd sinhgad' '13 403'  ||  'iw reosnrts www iwreosnrt com' / 'pune' '40'
+
+=== no key: address missing + name differs
+  Shree Trading Private Limited | E2/804, Golf City, Plot No. Gh-11, Sector-75, Noida, Gautam Buddha Nagar, Uttar Pradesh
+    -> Shree Tardig Private Limited | 
+       norm: 'trading' / 'buddha gautam gh golf ngr noida sec' '11 2 75 804'  ||  'tardig' / '' ''
+  India Group | Manjul, Second Floor, 4 - Sardar Nagar, Astron Chowk, Rajkot, Gujarat
+    -> India  Ltd | 
+       norm: 'group' / '2nd astron chowk manjul ngr rajkot sardar' '4'  ||  'india ltd' / '' ''
+  Shree Infotech Private Limited | 27/2, Bengal Ambuja, City Centre Durgapur, Durgapur, Bardhaman, West Bengal
+    -> Shree Infonech Private Limited | 
+       norm: 'infotech' / 'ambuja bardhaman bengal centre durgapur' '2 27'  ||  'infonech' / '' ''
+  Shree Services | Plot No.322, Saheed Nagar, Bhubaneswar, Khordha, Orissa
+    -> Shree Servnces | 
+       norm: 'services' / 'bhubaneswar khordha ngr saheed' '322'  ||  'servnces' / '' ''

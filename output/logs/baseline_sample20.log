@@ -1,0 +1,41 @@
+[1/5] loading + normalizing
+  source1: 2,206,821 rows — normalizing...
+  sampled Source 1 -> 109,970 rows
+  source2: 5,034,616 rows — normalizing...
+  source3: 5,285,603 rows — normalizing...
+[2/5] blocking S2
+  [S2] usable keys: 13,303,448  S1 key rows: 1,233,108  other key rows: 55,911,016
+  [S2] S1 rows 0-10,258: 380,499 pairs
+  [S2] S1 rows 10,258-20,505: 378,958 pairs
+  [S2] S1 rows 20,505-30,783: 380,533 pairs
+  [S2] S1 rows 30,783-41,100: 381,272 pairs
+  [S2] S1 rows 41,100-51,317: 377,255 pairs
+  [S2] S1 rows 51,317-61,698: 383,712 pairs
+  [S2] S1 rows 61,698-72,052: 385,490 pairs
+  [S2] S1 rows 72,052-82,258: 376,419 pairs
+  [S2] S1 rows 82,258-92,649: 384,399 pairs
+  [S2] S1 rows 92,649-102,980: 380,835 pairs
+  [S2] S1 rows 102,980-109,970: 259,885 pairs
+[3/5] features S2: 4,069,257 pairs
+[2/5] blocking S3
+  [S3] usable keys: 12,977,917  S1 key rows: 1,225,791  other key rows: 54,669,000
+  [S3] S1 rows 0-10,310: 382,848 pairs
+  [S3] S1 rows 10,310-20,604: 381,312 pairs
+  [S3] S1 rows 20,604-30,903: 381,149 pairs
+  [S3] S1 rows 30,903-41,273: 384,259 pairs
+  [S3] S1 rows 41,273-51,488: 377,833 pairs
+  [S3] S1 rows 51,488-61,914: 386,014 pairs
+  [S3] S1 rows 61,914-72,333: 387,876 pairs
+  [S3] S1 rows 72,333-82,593: 378,371 pairs
+  [S3] S1 rows 82,593-93,024: 386,045 pairs
+  [S3] S1 rows 93,024-103,406: 384,087 pairs
+  [S3] S1 rows 103,406-109,970: 244,151 pairs
+[3/5] features S3: 4,073,945 pairs
+  wrote C:\ML challenge\er_challenge\er_challenge\output\candidate_pairs.tsv (109,970 rows)
+[4/5] matching (rules)
+  using default params (run tune.py to optimise)
+  wrote C:\ML challenge\er_challenge\er_challenge\output\matching_results.tsv (109,970 rows)
+[5/5] evaluating
+  blocking recall (ceiling): 0.9291
+  macro F0.5 = 0.7892 | mean precision 0.8502 | mean recall 0.7265 | singleton acc 0.3573 (6065 singletons)
+done in 17.3 min

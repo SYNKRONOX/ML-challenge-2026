@@ -1,0 +1,29 @@
+[1/5] loading + normalizing (train, stream mode)
+  source1: 2,206,821 rows (cached normalization)
+  source2: 5,034,616 rows (cached normalization)
+  source3: 5,285,603 rows (cached normalization)
+  building IDF / frequency tables
+  sampled Source 1 -> 551,969 rows
+  using tuned params from C:\ML challenge\er_challenge\er_challenge\output\best_params_ml.json
+  stream mode keeps pairs with stage-1 score >= 0.02
+[  1.1 min] [2/5] blocking index S2
+  [S2] usable keys: 19,976,857  other key rows: 74,598,627
+[  3.9 min] [S2] S1 chunk 1/6 rows 0-100,000: 3,970,308 pairs, kept 590,448 (163,084 true)
+[  5.4 min] [S2] S1 chunk 2/6 rows 100,000-200,000: 3,971,668 pairs, kept 591,692 (163,445 true)
+[  6.6 min] [S2] S1 chunk 3/6 rows 200,000-300,000: 3,966,372 pairs, kept 590,951 (163,513 true)
+[  7.8 min] [S2] S1 chunk 4/6 rows 300,000-400,000: 3,970,203 pairs, kept 590,661 (163,325 true)
+[  9.0 min] [S2] S1 chunk 5/6 rows 400,000-500,000: 3,969,901 pairs, kept 591,278 (163,368 true)
+[  9.9 min] [S2] S1 chunk 6/6 rows 500,000-551,969: 2,063,164 pairs, kept 306,336 (84,973 true)
+[ 10.1 min] [2/5] blocking index S3
+  [S3] usable keys: 20,671,659  other key rows: 75,484,705
+[ 13.0 min] [S3] S1 chunk 1/6 rows 0-100,000: 3,985,918 pairs, kept 603,616 (172,992 true)
+[ 14.3 min] [S3] S1 chunk 2/6 rows 100,000-200,000: 3,990,631 pairs, kept 604,989 (172,684 true)
+[ 15.5 min] [S3] S1 chunk 3/6 rows 200,000-300,000: 3,986,431 pairs, kept 605,364 (172,999 true)
+[ 16.7 min] [S3] S1 chunk 4/6 rows 300,000-400,000: 3,988,179 pairs, kept 604,767 (172,380 true)
+[ 17.9 min] [S3] S1 chunk 5/6 rows 400,000-500,000: 3,988,728 pairs, kept 605,000 (172,542 true)
+[ 18.7 min] [S3] S1 chunk 6/6 rows 500,000-551,969: 2,072,526 pairs, kept 314,110 (90,089 true)
+[ 19.0 min] candidate pairs: 43,924,029 (79.6 per S1)
+  blocking recall (ceiling): 0.9699  (1,855,394/1,912,891)
+  wrote C:\ML challenge\er_challenge\er_challenge\output\candidate_pairs.tsv (551,969 rows, 43,924,029 candidate pairs)
+  saved weighted training set: 6,599,212 pairs, 1,855,394 true, effective 43,921,232 -> run: python code/tune.py --matcher ml --eval-sample 20
+done in 19.6 min

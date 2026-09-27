@@ -1,0 +1,16 @@
+8,756,916 candidate pairs (8,756,916 weighted), 369,424 true, 109,970 Source-1 entities evaluated
+  stage1 fold 0 trained (300 iters)
+  stage1 fold 1 trained (300 iters)
+  stage-1 out-of-fold macro F0.5 = 0.9621 | mean precision 0.9901 | mean recall 0.9182 | singleton acc 0.9283 (6065 singletons)
+  stage-2 pairs (stage-1 >= 0.02): 444,818 of 8,756,916, true pairs lost by pruning: 860
+  stage2 fold 0 trained (239 iters)
+  stage2 fold 1 trained (207 iters)
+  start F0.5=0.9637
+  round 1 MATCH_THRESHOLD      = 0.55    F0.5=0.9640
+  round 1 RELATIVE_MARGIN      = 0.3     F0.5=0.9642
+  round 2 MATCH_THRESHOLD      = 0.55    F0.5=0.9642
+  round 2 RELATIVE_MARGIN      = 0.3     F0.5=0.9642
+  out-of-fold macro F0.5 = 0.9642 | mean precision 0.9883 | mean recall 0.9277 | singleton acc 0.9487 (6065 singletons)
+  saved C:\ML challenge\er_challenge\er_challenge\output\model.pkl
+best macro F0.5 on train = 0.9642
+saved C:\ML challenge\er_challenge\er_challenge\output\best_params_ml.json
