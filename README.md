@@ -235,7 +235,7 @@ The raw data isn't in this repository. Place the provided files as
 `data/data_test/test_source{1,2,3}.tsv`.
 
 ```bash
-python -m venv .venv && source .venv/Scripts/activate  # Python 3.12 (Windows: .venv\Scriptsctivate)
+python -m venv .venv && source .venv/Scripts/activate  # Python 3.12 (PowerShell: .venv\Scripts\activate)
 pip install -r requirements.txt
 
 python code/build_translit.py                                     # Indic→English dictionary
